@@ -1,0 +1,5 @@
+settings.py
+ambientevirtual
+db.sqlite3
+__pycache__
+__init__.py 
