@@ -7,3 +7,6 @@ class Usuario(models.Model):
     email = email = models.EmailField(unique=True)
     foto = models.ImageField(upload_to="usuario/", null=True)
     sobre = models.TextField()
+
+    def __str__(self):
+        return self.nome

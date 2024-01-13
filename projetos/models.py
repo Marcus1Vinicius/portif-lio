@@ -6,3 +6,6 @@ class Projeto(models.Model):
     foto = models.ImageField(upload_to="projetos/", null=True)
     sobre = models.TextField()
     link = models.URLField()
+
+    def __str__(self):
+        return self.nome
