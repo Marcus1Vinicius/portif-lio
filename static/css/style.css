@@ -15,3 +15,7 @@ p{
 .sobre_mim{
 padding-top: 10vh;
 }
+
+ul{
+    list-style: none;
+}
