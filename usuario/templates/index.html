@@ -13,12 +13,13 @@
 
     <div class="container-fluid">
 
+        <!-- Seção de cabeçalho -->
         <div class="row"> 
-            <div class="col-12 d-flex justify-content-center">
+            <div class="col-md-12 d-flex justify-content-center">
                 <h1 class="text-light py-4">Olá, Mundo!</h1>
             </div>
 
-            <div class="col-12 d-flex justify-content-center">
+            <div class="col-md-12 d-flex justify-content-center">
                 <ul class="list-inline">
                     <li class="list-inline-item px-5"><a class="links" href="#">Sobre mim</a></li>
                     <li class="list-inline-item px-5"><a class="links" href="#">Minhas skills</a></li>
@@ -28,21 +29,19 @@
             </div>
         </div>
 
+        <!-- Seção de conteúdo -->
+        {% for usuario in usuarios %}
         <div class="row">
-            <div class="col-lg-4">
-                <div class="d-flex justify-content-end">
-                    <img class="eu img-fluid" src="img/20230202-_MG_6952_-_Tiago_Lima-removebg-preview.png" alt="">
-                </div>
-                
+            <div class="col-md-4">
+                <img class="eu img-fluid" src="/media/{{usuario.foto}}">
             </div>
 
-            <div class="col-lg-8 sobre_mim">
-                <h1 class="text-light">Olá! Eu me chamo .</h1>
-
-                <div class="text-light">
-                    <p>sobre</p>
-                </div>
-
+            <div class="col-md-8 sobre_mim">
+                    <h1 class="text-light nome">Olá! Eu me chamo {{ usuario.nome }}</h1>
+                    <div class="text-light">
+                        <p>{{ usuario.sobre }}</p>
+                    </div>
+                {% endfor %}
             </div>
         </div>
     </div>

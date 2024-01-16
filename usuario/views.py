@@ -1,7 +1,15 @@
 from django.shortcuts import render
-from .models import Usuario
+from .models import Usuario, Skill, Projeto, Rede_Social
 
 def index(request):
     usuarios = Usuario.objects.all()
-    return render(request, 'index.html', {'usuarios': usuarios})
+    skills = Skill.objects.all()
+    projetos = Projeto.objects.all()
+    redes_sociais = Rede_Social.objects.all()
+    context={}
+    context['usuarios'] = usuarios
+    context['skills'] = skills
+    context['projetos'] = projetos
+    context['redes'] = redes_sociais
+    return render(request, 'index.html', context)
 
