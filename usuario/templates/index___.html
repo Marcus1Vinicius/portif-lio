@@ -22,23 +22,18 @@
             <div class="col-md-12 d-flex justify-content-center">
 
                 <ul class="list-inline nav nav-tabs">
-
                     <li class="list-inline-item nav-item px-5">
-                        <a class="links nav-link active" href="#sobre_mim_content" data-bs-toggle="tab">Sobre mim</a>
+                        <a class="nav-link active" href="#sobre_mim_content" data-bs-toggle="tab">Sobre mim</a>
                     </li>
-
                     <li class="list-inline-item nav-item px-5">
-                        <a class="links nav-link" href="#minhas_skills_content" data-bs-toggle="tab">Minhas skills</a>
+                        <a class="text-light nav-link" href="#minhas_skills_content" data-bs-toggle="tab">Minhas skills</a>
                     </li>
-
                     <li class="list-inline-item nav-item px-5">
-                        <a class="links nav-link" href="#minhas_redes_content" data-bs-toggle="tab">Minhas redes</a>
+                        <a class="text-light nav-link" href="#minhas_redes_content" data-bs-toggle="tab">Minhas redes</a>
                     </li>
-
                     <li class="list-inline-item nav-item px-5">
                         <a class="links nav-link" href="#meus_projetos_content" data-bs-toggle="tab">Meus projetos</a>
                     </li>
-
                 </ul>
             </div>
         </div>
@@ -50,8 +45,8 @@
             <div class="col-md-4 d-flex justify-content-end">
                 <img class="eu img-fluid" src="/media/{{usuario.foto}}">
             </div>
-            
-            <div class="col-md-8 sobre_mim">
+
+            <div class="col-md-8">
                 <div class="tab-content">
                     <div class="tab-pane fade show active" id="sobre_mim_content">
                         <h1 class="text-light nome">Olá! Eu me chamo {{ usuario.nome }}</h1>
@@ -59,13 +54,11 @@
                             <p>{{ usuario.sobre }}</p>
                         </div>
                     </div>
+                    <!-- Adicione outros conteúdos aqui com IDs e classes correspondentes -->
                 </div>
             </div>
             
             {% endfor %}
-
-            <div class="tab-content">
-            </div>
         </div>
     </div>
 

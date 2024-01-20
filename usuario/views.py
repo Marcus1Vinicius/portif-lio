@@ -13,3 +13,4 @@ def index(request):
     context['redes'] = redes_sociais
     return render(request, 'index.html', context)
 
+
