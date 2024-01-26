@@ -17,28 +17,26 @@
         <div class="row"> 
             <div class="col-md-12 d-flex justify-content-center">
                 <h1 class="text-light py-4">Olá, Mundo!</h1>
-            </div>
-
-            <div class="col-md-12 d-flex justify-content-center">
-
-                <ul class="list-inline nav nav-tabs">
-                    <li class="list-inline-item nav-item px-5">
-                        <a class="nav-link active" href="#sobre_mim_content" data-bs-toggle="tab">Sobre mim</a>
-                    </li>
-                    <li class="list-inline-item nav-item px-5">
-                        <a class="text-light nav-link" href="#minhas_skills_content" data-bs-toggle="tab">Minhas skills</a>
-                    </li>
-                    <li class="list-inline-item nav-item px-5">
-                        <a class="text-light nav-link" href="#minhas_redes_content" data-bs-toggle="tab">Minhas redes</a>
-                    </li>
-                    <li class="list-inline-item nav-item px-5">
-                        <a class="links nav-link" href="#meus_projetos_content" data-bs-toggle="tab">Meus projetos</a>
-                    </li>
-                </ul>
+                <div>
+                    <ul class="list-inline">
+                        <li class="list-inline-item px-5">
+                            <a class="nav-link active" href="#sobre_mim_content" data-bs-toggle="tab">Sobre mim</a>
+                        </li>
+                        <li class="list-inline-item px-5">
+                            <a class="text-light nav-link" href="#minhas_skills_content" data-bs-toggle="tab">Minhas skills</a>
+                        </li>
+                        <li class="list-inline-item px-5">
+                            <a class="text-light nav-link" href="#minhas_redes_content" data-bs-toggle="tab">Minhas redes</a>
+                        </li>
+                        <li class="list-inline-item px-5">
+                            <a class="links nav-link" href="#meus_projetos_content" data-bs-toggle="tab">Meus projetos</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
 
-        <!-- Seção de conteúdo -->
+        
         {% for usuario in usuarios %}
         <div class="row">
 
@@ -67,3 +65,20 @@
 </html>
 
 <!--usar popover-->
+
+
+        <!-- Seção de conteúdo -->
+        {% for usuario in usuarios %}
+        <div class="row">
+            <div class="col-md-4 d-flex justify-content-end">
+                <img class="eu img-fluid" src="/media/{{usuario.foto}}">
+            </div>
+        
+                <div class="col-md-8 sobre_mim">
+                        <h1 class="text-light nome">Olá! Eu me chamo {{ usuario.nome }}</h1>
+                        <div class="text-light">
+                            <p>{{ usuario.sobre }}</p>
+                            {% endfor %}
+                        </div>
+                </div>
+        </div>
