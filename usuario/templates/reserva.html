@@ -1,0 +1,74 @@
+
+
+
+<div id="page">
+
+    <header>
+      <h1 class="text-light">Olá, mundo!</h1>
+    </header>
+
+    <main>
+      <div id="tabs">
+        <div class="tab-links">
+            <ul class="list-inline">
+                <li class="list-inline-item px-2 px-sm-3">
+                    <button data-id="mim" data-open>Sobre mim</button>
+                </li>
+
+                <li class="list-inline-item px-2 px-sm-3">
+                    <button data-id="skills">Minhas skills</button>
+                </li>
+
+                <li class="list-inline-item px-2 px-sm-3">
+                    <button data-id="projetos">Meus projetos</button>
+                </li>
+
+                <li class="list-inline-item px-2 px-sm-3">
+                    <button data-id="redes">Minhas redes</button>
+                </li>
+            </ul>
+
+        </div>
+  
+        <div class="tab-content">
+
+          <section id="mim">
+            {% for usuario in usuarios %}
+            <div class="col-md-4">
+                <img class="eu img-fluid" src="/media/{{usuario.foto}}">
+            </div>
+
+            <div class="col-md-8">
+                <div>
+                    <h1 class="text-light nome px-2 px-sm-3">Eu me chamo {{ usuario.nome }}</h1>
+                    <p class="text-light px-2 px-sm-3">{{ usuario.sobre }}</p>
+                    {% endfor %}
+                <div>
+            </div>
+          </section>
+
+          <section id="skills">
+            <h2>How to produce</h2>
+            <p>Develop your idea and record it.</p>
+            <p>To record you will need: Sound, Camera, Light and a Computer</p>
+          </section>
+
+          <section id="projetos">
+            <h2>How to delivery</h2>
+            <p>You can choose any digital media like: YouTube, Twitch or Instagram.</p>
+          </section>
+
+          <section id="redes">
+            <h2>How to delivery</h2>
+            <p>You can choose any digital media like: YouTube, Twitch or Instagram.</p>
+          </section>
+
+        </div>
+      </div>
+    </main>
+  </div>
+    
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+
+</script>
