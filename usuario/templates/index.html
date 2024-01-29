@@ -92,51 +92,59 @@
 
     <script>
         const html = {
-            links: [...document.querySelector('.tab-links').children],
+            links: [...document.querySelectorAll('.tab-links .links')],
             content: [...document.querySelector('.tab-content').children]
         };
-    
+        
         function tabNavigation() {
             function hideAllTabContent() {
                 html.content.forEach(section => {
                     section.style.display = "none";
                 });
             }
-    
+        
             function removeAllActiveClass() {
                 console.log('removeAllActiveClass');
             }
-    
+        
             function showCurrentTab(id) {
-                console.log('show current:' + id);
+                const tabcontent = document.getElementById(id);
+                if (tabcontent) {
+                    tabcontent.style.display = 'block';
+                }
             }
-    
+        
             function selectTab(event) {
-                const target = event.currentTarget
-                showCurrentTab(target.dataset.id)
+                hideAllTabContent();
+                const target = event.currentTarget;
+                const id = target.dataset.id;
+                console.log('Selected tab ID:', id);
+                showCurrentTab(id);
             }
-    
+        
             function listenForChange() {
                 html.links.forEach(tab => {
                     tab.addEventListener('click', selectTab);
                 });
             }
-    
+        
             function init() {
-                hideAllTabContent();
+                // Exibir a seção "Sobre Mim" por padrão
+                showCurrentTab("sobre_mim");
                 listenForChange();
             }
-    
+        
             return {
                 init
             };
         }
-    
+        
         window.addEventListener('load', () => {
             const tabNavigationInstance = tabNavigation();
             tabNavigationInstance.init();
         });
-    </script>
+        </script>
+        
     
     
 </body>
