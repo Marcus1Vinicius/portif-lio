@@ -43,3 +43,26 @@ ul{
     padding: 10px;
     display: inline-block;
 }
+
+.custom-ul {
+    display: flex;
+    justify-content: flex-start;
+    padding: 0;
+    margin: 0;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    list-style: none;
+}
+
+.custom-ul li {
+  flex: 0 0 auto;
+  margin-right: 15px;
+  text-align: center;
+  display: inline-block;
+}
+
+
+.v-full {
+    min-height: calc(100vh - 73px);
+  }
+

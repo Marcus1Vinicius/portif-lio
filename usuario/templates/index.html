@@ -51,15 +51,15 @@
             </div>
         </div>
 
-        <div class="row">
+        <div class="row v-full">
             <div class="tab-content">
 
                 <section id="sobre_mim">
 
                     {% for usuario in usuarios %}
-                    <div class="col-md-4 d-flex justify-content-end">
+                    
                         <img class="eu img-fluid" src="/media/{{usuario.foto}}">
-                    </div>
+                    
                     
                     <div class="col-md-8">
                         <h1 class="text-light nome">Olá! Eu me chamo {{ usuario.nome }}</h1>
@@ -72,7 +72,24 @@
                 </section>
 
                 <section id="minhas_skills">
-                    
+                    <div>
+                        <ul class="d-flex justify-content-center align-items-center text-center">
+                            {% for skill in skills %}
+                            <li>
+                                <img class="rounded-circle" src="/media/{{skill.foto}}" alt="{{skill.nome}}" width="250" height="250">
+                                <h4 class="text-light py-3">{{skill.nome}}</h4>
+                            </li>
+                            {% empty %}
+                            <li>
+                                <h6 class="text-center py-2">Nenhuma skill cadastrada!</h6>
+                            </li> 
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </section>
+
+                
+                      
                 </section>
 
                 <section id="minhas_redes">
@@ -151,3 +168,5 @@
 </html>
 
 <!--usar popover-->
+
+
