@@ -60,9 +60,3 @@ ul{
   text-align: center;
   display: inline-block;
 }
-
-
-.v-full {
-    min-height: calc(100vh - 73px);
-  }
-

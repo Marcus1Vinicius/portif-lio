@@ -58,7 +58,7 @@
                         <img class="eu img-fluid" src="/media/{{usuario.foto}}">
                     </div>
                     
-                    <div class="col-md-8">
+                    <div class="col-md-8 py-5">
                         <h1 class="text-light nome">Olá! Eu me chamo {{ usuario.nome }}</h1>
                         <div class="text-light">
                             <p>{{ usuario.sobre }}</p>
@@ -67,11 +67,11 @@
                     {% endfor %}
         </div>
 
-        <div class="row">
+        <div class="row" id="skills">
             <div class=col-md-12>
                 <ul class="d-flex justify-content-center align-items-center text-center">
                     {% for skill in skills %}
-                    <li>
+                    <li class="p-5">
                         <img class="rounded-circle" src="/media/{{skill.foto}}" alt="{{skill.nome}}" width="250" height="250">
                         <h4 class="text-light py-3">{{skill.nome}}</h4>
                     </li>
@@ -84,13 +84,14 @@
             </div>
         </div>
 
-        <div class="row">
+        <div class="row" id="redes">
             <div class="col-md-12">
-                <ul class="csutom-ul d-flex justify-content-center align-items-center text-center">
-                    {% for rede in redes_sociais %}
-                    <li>
+                <ul class="csutom-ul justify-content-center align-items-center text-center">
+                    {% for rede in redes %}
+                    <li class="p-5">
                         <img class="rounded-circle" src="/media/{{rede.foto}}" alt="{{rede.nome}}" width="250" height="250">
                         <h4 class="text-light py-3">{{rede.nome}}</h4>
+                        <a class="h4 text-light" href="{{rede.link}}" target="_blank" class="text-light py-3">Link</a>
                     </li>
                     {% empty %}
                     <li>
@@ -101,13 +102,14 @@
             </div>
         </div>
 
-        <div class="row">
+        <div class="row" id="projetos">
             <div class="col-md-12">
-                <ul class="custom-ul d-flex justify-content-center align-items-center text-center">
+                <ul class="custom-ul justify-content-center align-items-center text-center">
                     {% for projeto in projetos %}
-                    <li>
-                        <img src="/static/img/breve.png" alt="{{projeto.nome}}" width="250" height="250">
+                    <li class="p-5">
+                        <img class="rounded-circle" src="/media/{{projeto.foto}}" alt="{{projeto.nome}}" width="250" height="250">
                         <h4 class="text-light py-3">{{projeto.nome}}</h4>
+                        <a class="h4 text-light" href="{{projeto.link}}" target="_blank" class="text-light py-3">Link</a>
                     </li>
                     {% empty %}
                     <li class="p-5">
