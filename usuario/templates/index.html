@@ -13,7 +13,7 @@
 
     <div class="container-fluid">
 
-        <div class="row"> 
+        <div class="row navbar"> 
             <div class="col-12 text-center">
                 <h1 class="text-light py-4">Olá, Mundo!</h1>
             </div>
@@ -69,7 +69,7 @@
 
         <div class="row" id="skills">
             <div class=col-md-12>
-                <ul class="d-flex justify-content-center align-items-center text-center">
+                <ul class="custom-ul d-flex justify-content-center align-items-center text-center">
                     {% for skill in skills %}
                     <li class="p-5">
                         <img class="rounded-circle" src="/media/{{skill.foto}}" alt="{{skill.nome}}" width="250" height="250">
@@ -86,7 +86,7 @@
 
         <div class="row" id="redes">
             <div class="col-md-12">
-                <ul class="csutom-ul justify-content-center align-items-center text-center">
+                <ul class="csutom-ul d-flex justify-content-center align-items-center text-center">
                     {% for rede in redes %}
                     <li class="p-5">
                         <img class="rounded-circle" src="/media/{{rede.foto}}" alt="{{rede.nome}}" width="250" height="250">
@@ -104,27 +104,17 @@
 
         <div class="row" id="projetos">
             <div class="col-md-12">
-                <ul class="custom-ul justify-content-center align-items-center text-center">
+                <ul class="csutom-ul justify-content-center align-items-center text-center">
                     {% for projeto in projetos %}
                     <li class="p-5">
                         <img class="rounded-circle" src="/media/{{projeto.foto}}" alt="{{projeto.nome}}" width="250" height="250">
-                        <h4 class="text-light py-3">{{projeto.nome}}</h4>
+                        <h4 class="text-light py-3">{{rede.nome}}</h4>
                         <a class="h4 text-light" href="{{projeto.link}}" target="_blank" class="text-light py-3">Link</a>
                     </li>
                     {% empty %}
                     <li class="p-5">
                         <img src="/static/img/breve.png" alt="{{projeto.nome}}" width="250" height="250">
                     </li> 
-
-                    <li class="p-5">
-                        <img src="/static/img/breve.png" alt="{{projeto.nome}}" width="250" height="250">
-                    </li> 
-
-                    <li class="p-5">
-                        <img src="/static/img/breve.png" alt="{{projeto.nome}}" width="250" height="250">
-                    </li> 
-
-                    
                     {% endfor %}
                 </ul>
             </div>
