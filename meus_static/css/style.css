@@ -60,3 +60,14 @@ ul{
   text-align: center;
   display: inline-block;
 }
+
+.fixo{
+    position: fixed;
+    top: 13%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+html{
+    height: 350vh;
+}

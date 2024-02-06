@@ -12,46 +12,45 @@
 <body style="background-color: #262626;">
 
     <div class="container-fluid">
-
-        <div class="row navbar"> 
-            <div class="col-12 text-center">
-                <h1 class="text-light py-4">Olá, Mundo!</h1>
+        <header id="header">
+            <div class="row flex"> 
+                <div class="col-12 text-center">
+                    <h1 class="text-light py-4">Olá, Mundo!</h1>
+                </div>
+        
+                <div class="col-12">
+                        <nav class="fixo"> 
+                            <ul class="list-inline"> 
+                                <div class="tab-links container">
+                                    <div class="item list-inline-item px-2 px-sm-3">
+                                        <li>
+                                            <a class="links" data-id="sobre_mim" data-open>Sobre mim</a>
+                                        </li>
+                                    </div>
+                                    <div class="item list-inline-item px-2 px-sm-3">
+                                        <li>
+                                            <a class="links" data-id="minhas_skills">Minhas skills</a>
+                                        </li>
+                                    </div>
+                                    <div class="item list-inline-item px-2 px-sm-3">       
+                                        <li>
+                                            <a class="links" data-id="minhas_redes">Minhas redes</a>
+                                        </li>
+                                    </div>
+                                    <div class="item list-inline-item px-2 px-sm-3">      
+                                        <li>
+                                            <a class="links" data-id="meus_projetos">Meus projetos</a>
+                                        </li>
+                                    </div>
+                                </div>
+                            </ul>
+                      </nav>
+                </div>
             </div>
     
-            <div class="col-12 text-center">
-                <ul class="list-inline"> 
-                    <div class="tab-links container">
-    
-                        <div class="item list-inline-item px-2 px-sm-3">
-                            <li>
-                                <a class="links" data-id="sobre_mim" data-open>Sobre mim</a>
-                            </li>
-                        </div>
-    
-                        <div class="item list-inline-item px-2 px-sm-3">
-                            <li>
-                                <a class="links" data-id="minhas_skills">Minhas skills</a>
-                            </li>
-                        </div>
-    
-                        <div class="item list-inline-item px-2 px-sm-3">       
-                            <li>
-                                <a class="links" data-id="minhas_redes">Minhas redes</a>
-                            </li>
-                        </div>
-    
-                        <div class="item list-inline-item px-2 px-sm-3">      
-                            <li>
-                                <a class="links" data-id="meus_projetos">Meus projetos</a>
-                            </li>
-                        </div>
-                        
-                    </div>
-                </ul>
-            </div>
-        </div>
+        </header>
 
-        <div class="row">
+        <div class="row py-5">
             
                     {% for usuario in usuarios %}
                     <div class="col-md-4 d-flex justify-content-end">
@@ -68,55 +67,67 @@
         </div>
 
         <div class="row" id="skills">
-            <div class=col-md-12>
-                <ul class="custom-ul d-flex justify-content-center align-items-center text-center">
-                    {% for skill in skills %}
-                    <li class="p-5">
-                        <img class="rounded-circle" src="/media/{{skill.foto}}" alt="{{skill.nome}}" width="250" height="250">
-                        <h4 class="text-light py-3">{{skill.nome}}</h4>
-                    </li>
-                    {% empty %}
-                    <li>
-                        <h6 class="text-center py-2">Nenhuma skill cadastrada!</h6>
-                    </li> 
-                    {% endfor %}
-                </ul>
+            <div class="col-md-12 py-5">
+                <section class="py-5">
+                    <nav class="overflow-x-auto py-5">
+                        <ul class="custom-ul py-5"> <!--d-flex justify-content-center align-items-center text-center-->
+                            {% for skill in skills %}
+                            <li class="p-5">
+                                <img class="rounded-circle" src="/media/{{skill.foto}}" alt="{{skill.nome}}" width="250" height="250">
+                                <h4 class="text-light py-3">{{skill.nome}}</h4>
+                            </li>
+                            {% empty %}
+                            <li>
+                                <h6 class="text-center py-2">Nenhuma skill cadastrada!</h6>
+                            </li> 
+                            {% endfor %}
+                        </ul>
+                    </nav>
+                </section>
             </div>
         </div>
 
         <div class="row" id="redes">
-            <div class="col-md-12">
-                <ul class="csutom-ul d-flex justify-content-center align-items-center text-center">
-                    {% for rede in redes %}
-                    <li class="p-5">
-                        <img class="rounded-circle" src="/media/{{rede.foto}}" alt="{{rede.nome}}" width="250" height="250">
-                        <h4 class="text-light py-3">{{rede.nome}}</h4>
-                        <a class="h4 text-light" href="{{rede.link}}" target="_blank" class="text-light py-3">Link</a>
-                    </li>
-                    {% empty %}
-                    <li>
-                        <h6 class="text-center py-2">Nenhuma rede cadastrada!</h6>
-                    </li> 
-                    {% endfor %}
-                </ul>
+            <div class="col-md-12 py-5">
+                <section class="py-5">
+                    <nav class="overflow-x-auto py-5">
+                        <ul class="custom-ul py-5"> 
+                            {% for rede in redes %}
+                            <li class="p-5">
+                                <img class="rounded-circle" src="/media/{{rede.foto}}" alt="{{rede.nome}}" width="250" height="250">
+                                <h4 class="text-light py-3">{{rede.nome}}</h4>
+                                <a class="h4 text-light" href="{{rede.link}}" target="_blank" class="text-light py-3">Link</a>
+                            </li>
+                            {% empty %}
+                            <li>
+                                <h6 class="text-center py-2">Nenhuma rede cadastrada!</h6>
+                            </li> 
+                            {% endfor %}
+                        </ul>
+                    </nav>
+                </section>
             </div>
         </div>
 
         <div class="row" id="projetos">
-            <div class="col-md-12">
-                <ul class="csutom-ul justify-content-center align-items-center text-center">
-                    {% for projeto in projetos %}
-                    <li class="p-5">
-                        <img class="rounded-circle" src="/media/{{projeto.foto}}" alt="{{projeto.nome}}" width="250" height="250">
-                        <h4 class="text-light py-3">{{rede.nome}}</h4>
-                        <a class="h4 text-light" href="{{projeto.link}}" target="_blank" class="text-light py-3">Link</a>
-                    </li>
-                    {% empty %}
-                    <li class="p-5">
-                        <img src="/static/img/breve.png" alt="{{projeto.nome}}" width="250" height="250">
-                    </li> 
-                    {% endfor %}
-                </ul>
+            <div class="col-md-12 py-5">
+                <section class="py-5">
+                    <nav class="overflow-x-auto py-5">
+                        <ul class="custom-ul justify-content-center align-items-center text-center py-5">
+                            {% for projeto in projetos %}
+                            <li class="p-5">
+                                <img class="rounded-circle" src="/media/{{projeto.foto}}" alt="{{projeto.nome}}" width="250" height="250">
+                                <h4 class="text-light py-3">{{rede.nome}}</h4>
+                                <a class="h4 text-light" href="{{projeto.link}}" target="_blank" class="text-light py-3">Link</a>
+                            </li>
+                            {% empty %}
+                            <li class="p-5">
+                                <img src="/static/img/breve.png" alt="{{projeto.nome}}" width="250" height="250">
+                            </li> 
+                            {% endfor %}
+                        </ul>
+                    </nav>
+                </section>
             </div>
         </div>
 
