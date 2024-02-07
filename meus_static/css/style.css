@@ -11,26 +11,16 @@
 
 .links:hover{
     transition: .25s;
-    background-color: rgb(168, 3, 3);
-    border-radius: 10px;
-    padding: 10px;
+    text-decoration: underline red;
     display: inline-block;
 }
 
 .links.active {
     transition: .25s;
-    background-color: rgb(168, 3, 3);
-    border-radius: 10px;
-    padding: 10px;
+    text-decoration: underline red;
     display: inline-block;
 }
 
-
-
-.container:hover > :not(:hover){
-    opacity: .4;
-    transform: scale(0.9);
-}
 .eu{
     border-radius: 20vh;
 }
@@ -76,8 +66,23 @@ ul{
     top: 15%;
     left: 50%;
     transform: translate(-50%, -50%);
+    z-index: 999;
 }
 
 html{
     height: 350vh;
+}
+
+.hidden{
+    opacity: 0;
+    filter: blur(15px);
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+
+.show{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+    transition: all 1s;
 }
