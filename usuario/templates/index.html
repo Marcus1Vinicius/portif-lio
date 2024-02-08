@@ -76,11 +76,11 @@
                             <li class="p-5">
                                 <img class="rounded-circle" src="/media/{{ skill.foto }}" alt="{{ skill.nome }}" width="250" height="250">
                                 <h4 class="text-light py-3">{{ skill.nome }}</h4>
-                                <!-- Adiciona um data-attribute com o ID único do modal -->
+                                
                                 <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#exampleModal{{ skill.id }}">
                                     Saiba mais
                                 </button>
-                                <!-- Modifica o ID do modal para incluir o ID único da skill -->
+                                
                                 <div class="modal fade" id="exampleModal{{ skill.id }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                     <div class="modal-dialog">
                                         <div class="modal-content">
