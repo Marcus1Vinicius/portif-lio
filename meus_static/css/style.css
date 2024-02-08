@@ -9,10 +9,22 @@
     cursor: pointer;
 }
 
-.links:hover{
-    transition: .25s;
-    text-decoration: underline red;
-    display: inline-block;
+.links::after{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: "";
+    height: 2px;
+    width: 0;
+    transition: 1s;
+    background-color: red;
+}
+
+.links:hover::after,
+.link.active::after{
+
+    width: 100%;
+
 }
 
 .links.active {
