@@ -81,17 +81,19 @@
                                 <button type="button" class="btn btn-light" id="open-modal">
                                     Saiba mais
                                 </button>
-                                
-                                <div id="modal">
-                                    <div class="modal-header">
-                                        <h2 class="text-light">{{ skill.nome }}</h2>
-                                        <button class="btn btn-danger" id="close-modal">Fechar</button>
+                                <nav class="show-modal">
+                                    <div id="modal">
+                                        <div class="modal-header py-2">
+                                            <h2 class="text-dark">{{ skill.nome }}</h2>
+                                            <button class="btn btn-dark" id="close-modal">Fechar</button>
+                                        </div>
+    
+                                        <div class="modal-body">
+                                            <p class="text-dark">{{ skill.sobre }}</p>
+                                        </div>
                                     </div>
+                                </nav>
 
-                                    <div class="modal-body">
-                                        <p class="text-light">{{ skill.sobre }}</p>
-                                    </div>
-                                </div>
                                 
                             </li>
                             {% empty %}
