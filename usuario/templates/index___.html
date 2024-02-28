@@ -175,23 +175,18 @@
 <!--modal exemplo-->
 
                                 
-<button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#exampleModal{{ skill.id }}">
+                                
+<button type="button" class="btn btn-light" id="open-modal">
     Saiba mais
 </button>
 
-<div class="modal fade" id="exampleModal{{ skill.id }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalLabel">Sobre: {{ skill.nome }}</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                {{ skill.sobre }}
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Fechar</button>
-            </div>
+    <div id="modal">
+        <div class="modal-header py-2">
+            <h2 class="text-dark">{{ skill.nome }}</h2>
+            <button class="btn btn-dark" id="close-modal">Fechar</button>
+        </div>
+
+        <div class="modal-body">
+            <p class="text-dark">{{ skill.sobre }}</p>
         </div>
     </div>
-</div>
