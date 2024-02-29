@@ -14,3 +14,7 @@ const myObserver = new IntersectionObserver((entries) => {
 elementos.forEach((elementos) => myObserver.observe(elementos))
 
 
+window.addEventListener("scroll", function(){
+    let header = document.querySelector('#header')
+    header.classList.toggle('rolagem', window.scrollY > 0)
+})
