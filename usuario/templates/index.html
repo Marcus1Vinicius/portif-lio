@@ -49,15 +49,13 @@
                     
                 <div class="col-md-6 py-5">
                     <nav>
-                        <div class="box_name_social-media d-flex flex-column align-items-center justify-content-center">
+                        <div class="d-flex flex-column align-items-center justify-content-center">
                             <div class="text-center">
                                 <h1 class="text-light nome">Olá! Eu sou {{ usuario.nome }}</h1>
                             </div>
                 
-                            <div>
-                                <div class="box-p text-center">
+                            <div class="text-center col-md-6">
                                     <p class="text-light">{{ usuario.sobre }}</p>
-                                </div>
                             </div>
                 
                             <div class="text-center">
@@ -120,9 +118,8 @@
                             <ul class="custom-ul justify-content-center align-items-center text-center">
                                 {% for projeto in projetos %}
                                 <li>
-                                    <img class="rounded-circle" src="/media/{{projeto.foto}}" alt="{{projeto.nome}}" width="350" height="350">
+                                    <a href="{{projeto.link}}"><img class="rounded-circle" src="/media/{{projeto.foto}}" alt="{{projeto.nome}}" width="350" height="350"></a>
                                     <h4 class="text-light py-3">{{projeto.nome}}</h4>
-                                    <a class="h4 text-light" href="{{projeto.link}}" target="_blank" class="text-light py-3">Link</a>
                                 </li>
                                 {% empty %}
                                 <li>

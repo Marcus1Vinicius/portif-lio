@@ -78,17 +78,13 @@ html{
 }
 
 
-.box-p{
-    width: 60%;
-}
-
 .links{
     margin-top: 2%;
 }
 
 header{
     width: 100%;
-    padding: 10px 4%;
+    padding: 10px 2%;
     position: fixed;
     top: 0;
     left: 0;
