@@ -47,18 +47,21 @@
                
                 {% for usuario in usuarios %}
                     
-                    <div class="col-md-6 py-5">
-                        <nav class="overflow-x-auto">
-                            <div>
+                <div class="col-md-6 py-5">
+                    <nav>
+                        <div class="box_name_social-media d-flex flex-column align-items-center justify-content-center">
+                            <div class="text-center">
                                 <h1 class="text-light nome">Olá! Eu sou {{ usuario.nome }}</h1>
-
-                                <div class="box-p">
-                                    <p class="text-light" id="sobre_user">{{ usuario.sobre }}</p>
+                            </div>
+                
+                            <div>
+                                <div class="box-p text-center">
+                                    <p class="text-light">{{ usuario.sobre }}</p>
                                 </div>
-                                
-                                                            
+                            </div>
+                
+                            <div class="text-center">
                                 <ul class="custom-ul"> 
-                                    
                                     {% for rede in redes %}
                                     <li>
                                         <a href="{{rede.link}}">
@@ -72,8 +75,10 @@
                                     {% endfor %}
                                 </ul>
                             </div>
-                        </nav>
-                    </div>
+                        </div>
+                    </nav>
+                </div>
+                
 
                     <div class="col-md-6 d-flex justify-content-center">
                         <img class="eu img-fluid" src="/media/{{usuario.foto}}">
