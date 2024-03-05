@@ -113,3 +113,16 @@ header.rolagem{
     border-radius: 15px;
 }
 
+.list-inline-item::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 4px;
+    background-color: rgb(204, 0, 0);
+    transition: width 0.5s;
+}
+
+.list-inline-item:hover::after {
+    width: 100%;
+}
+
