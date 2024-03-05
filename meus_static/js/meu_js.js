@@ -20,24 +20,34 @@ window.addEventListener("scroll", function(){
 })
 
 document.addEventListener("DOMContentLoaded", function() {
-    // Adiciona um evento de clique para todos os links com a classe "links"
     var links = document.querySelectorAll('.links');
     links.forEach(function(link) {
         link.addEventListener('click', function(event) {
-            event.preventDefault(); // Previne o comportamento padrão do link
-            
-            // Obtém o ID da seção a ser scrollada do atributo data-id do link
+            event.preventDefault(); 
             var targetId = this.getAttribute('data-id');
             
-            // Obtém a posição da seção alvo
             var targetSection = document.getElementById(targetId);
-            var targetPosition = targetSection.offsetTop;
             
-            // Realiza o scroll suave até a seção alvo
-            window.scrollTo({
-                top: targetPosition,
-                behavior: 'smooth'
-            });
+            // Verificar se o elemento com o ID especificado existe
+            if (targetSection) {
+                var targetPosition = targetSection.offsetTop;
+                
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            } else {
+                console.error("Elemento com o ID especificado não encontrado.");
+            }
         });
     });
+});
+
+
+const hamburguer = document.querySelector(".hamburguer");
+const navmenu = document.querySelector(".nav-menu");
+
+hamburguer.addEventListener("click", () => {
+    hamburguer.classList.toggle("active");
+    navmenu.classList.toggle("active");
 });
