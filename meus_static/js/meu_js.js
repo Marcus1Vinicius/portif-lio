@@ -51,3 +51,4 @@ hamburguer.addEventListener("click", () => {
     hamburguer.classList.toggle("active");
     navmenu.classList.toggle("active");
 });
+

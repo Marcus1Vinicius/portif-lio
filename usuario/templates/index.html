@@ -105,14 +105,14 @@
                                 <h4 class="text-light py-3">{{ skill.nome }}</h4>
         
                                 <button popovertarget="my-popover-{{ skill.id }}" class="btn btn-light">
-                                    sobre
+                                    Sobre
                                 </button>
-        
-                                <div id="my-popover-{{ skill.id }}" popover>
-                                    <p class="text-dark">
+                                
+                                <article id="my-popover-{{ skill.id }}" popover style="border: none; width: 50%; border-radius: 20px; padding: 1rem; background-color: #000000; transition: all 1ms;">
+                                    <p class="text-light">
                                         {{ skill.sobre }}
                                     </p>
-                                </div>
+                                </article>
         
                             </li>
                             {% empty %}
@@ -137,6 +137,16 @@
                                 <li>
                                     <a href="{{projeto.link}}"><img class="rounded-circle" src="/media/{{projeto.foto}}" alt="{{projeto.nome}}" width="350" height="350"></a>
                                     <h4 class="text-light py-3">{{projeto.nome}}</h4>
+
+                                    <button popovertarget="mi-popover-{{ projeto.id }}" class="btn btn-light">
+                                        Sobre
+                                    </button>
+                                    
+                                    <article id="mi-popover-{{ projeto.id }}" popover style="border: none; width: 50%; border-radius: 20px; padding: 1rem; background-color: #000000; transition: all 1ms;">
+                                        <p class="text-light">
+                                            {{ projeto.sobre }}
+                                        </p>
+                                    </article>
                                 </li>
                                 {% empty %}
                                 <li>
