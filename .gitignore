@@ -1,4 +1,3 @@
-settings.py
 ambientevirtual
 db.sqlite3
 __pycache__
@@ -12,6 +11,9 @@ __pycache__/
 # C extensions
 *.so
 
+requirements.txt
+
+flyctl.tar.gz
 # Distribution / packaging
 .Python
 build/
