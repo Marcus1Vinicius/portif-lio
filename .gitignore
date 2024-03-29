@@ -2,7 +2,7 @@ ambientevirtual
 db.sqlite3
 __pycache__
 __init__.py 
-
+secret_key.txt
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

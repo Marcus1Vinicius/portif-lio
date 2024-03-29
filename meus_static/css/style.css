@@ -68,6 +68,22 @@ ul{
     flex-wrap: nowrap;
     overflow-x: auto;
     list-style: none;
+    scrollbar-width: thin;
+    
+}
+
+.custom-ul::-webkit-scrollbar{
+    width: 12px;
+    border: 1px solid rgb(200, 200, 200);
+}
+.custom-ul::-webkit-scrollbar-thumb {
+    background-color: #9b0000;
+    border-radius: 6px;
+}
+
+/* Estilizando a área de rolagem */
+.custom-ul::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
 }
 
 .custom-ul li {
