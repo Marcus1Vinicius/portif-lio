@@ -13,7 +13,6 @@
 
     <div class="container-fluid">
         <div class="row">
-            <header id="header">
                 <div class="container">
                     <div class="flex">
                         <nav class="links"> 
@@ -34,15 +33,10 @@
                                 </li>  
                             </ul>
 
-                            <div class="hamburguer">
-                                <span class="bar"></span>
-                                <span class="bar"></span>
-                                <span class="bar"></span>
-                            </div>
                         </nav>
                     </div>
                 </div>
-            </header>
+            
 
             </div>
     
@@ -57,11 +51,11 @@
                     <nav>
                         <div class="d-flex flex-column align-items-center justify-content-center">
                             <div class="text-center">
-                                <h1 class="text-light nome">Olá! Eu sou {{ usuario.nome }}</h1>
+                                <h1 class="nome">Olá! Eu sou {{ usuario.nome }}</h1>
                             </div>
                 
                             <div class="text-center col-md-6">
-                                    <p class="text-light h3 sobre_user">{{ usuario.sobre }}</p>
+                                    <p class="h3 sobre_user">{{ usuario.sobre }}</p>
                             </div>
                 
                             <div class="text-center">
@@ -97,12 +91,12 @@
             <div class="row py-5">
                 <div class="col-md-12">
                     <nav class="overflow-x-auto nav_skill">
-                        <h1 class="text-light titulos mx-5 my-5">Minhas skills</h1>
+                        <h1 class="titulos mx-5 my-5">Minhas skills</h1>
                         <ul class="custom-ul">
                             {% for skill in skills %}
                             <li class="p-5">
                                 <img class="rounded-circle" src="/media/{{ skill.foto }}" alt="{{ skill.nome }}" width="250" height="250">
-                                <h4 class="text-light py-3">{{ skill.nome }}</h4>
+                                <h4 class=" py-3">{{ skill.nome }}</h4>
         
                                 <button popovertarget="my-popover-{{ skill.id }}" class="btn btn-light">
                                     Sobre
@@ -131,7 +125,7 @@
             <div class="row py-5">
                 <div class="col-md-12">
                         <nav class="overflow-x-auto">
-                            <h1 class="text-light titulos mx-5 my-5">Meus projetos</h1>
+                            <h1 class="titulos mx-5 my-5">Meus projetos</h1>
                             <ul class="custom-ul justify-content-center align-items-center text-center">
                                 {% for projeto in projetos %}
                                 <li>
