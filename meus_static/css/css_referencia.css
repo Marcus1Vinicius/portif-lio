@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@200..700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Oswald:wght@200..700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Oswald:wght@200..700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Lilita+One&family=Oswald:wght@200..700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Lilita+One&family=Oswald:wght@200..700&display=swap');
+
+.links{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 2.5vh;
+    font-family: 'Inria Sans', sans-serif;
+    font-weight: bold;
+}
+
+.sobre_user{
+    font-family: 'Inria Sans', sans-serif;
+}
+
+/* .item{
+    transition: .35s;
+    cursor: pointer;
+} */
+
+
+.eu{
+    border-radius: 20vh;
+}
+
+p{
+    font-size: 2.5vh;
+}
+
+.sobre_mim{
+padding-top: 10vh;
+}
+
+ul{
+    list-style: none;
+}
+
+.nome {
+    border-radius: 10px;
+    padding: 10px;
+    display: inline-block;
+    font-family: 'Inria Sans', sans-serif;
+    font-weight: bold;
+    color: black;
+}
+
+.titulos{
+    border-radius: 10px;
+    padding: 10px;
+    display: inline-block;
+    font-family: 'Inria Sans', sans-serif;
+    font-weight: bold;
+    color: black;
+}
+
+.custom-ul {
+    display: flex;
+    justify-content: flex-start;
+    padding: 0;
+    margin: 0;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    list-style: none;
+    scrollbar-width: thin;
+}
+
+/* .custom-ul::-webkit-scrollbar{
+    width: 12px;
+    border: 1px solid rgb(200, 200, 200);
+}
+.custom-ul::-webkit-scrollbar-thumb {
+    background-color: #9b0000;
+    border-radius: 6px;
+} */
+
+/* Estilizando a área de rolagem */
+/* .custom-ul::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+} */
+
+.custom-ul li {
+  flex: 0 0 auto;
+  margin-right: 15px;
+  text-align: center;
+  display: inline-block;
+}
+
+html{
+    height: 200vh;
+}
+
+/* .hidden{
+    opacity: 0;
+    filter: blur(15px);
+    transform: translateX(-100%);
+    transition: all 1s;
+} */
+
+/* .show{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+    transition: all 1s;
+} */
+
+
+/* .links{
+    margin-top: 2%;
+} */
+
+/* header{
+    width: 100%;
+    padding: 10px 2%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0);
+    transition: all 1s;
+} */
+
+/* .container{
+    max-width: 1280px;
+    margin: auto;
+} */
+
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.divisao{
+    margin-top: 10%;
+}
+
+/* header.rolagem{
+    background-color: rgba(0, 0, 0, 0.857);
+    border-radius: 15px;
+} */
+
+/* .list-inline-item::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 4px;
+    background-color: rgb(204, 0, 0);
+    transition: width 0.5s;
+} */
+
+/* .list-inline-item:hover::after {
+    width: 100%;
+}
+
+.hamburguer{
+    display: none;
+    cursor: pointer;
+} */
+
+/* .bar{
+    display: block;
+    width: 28px;
+    height: 3px;
+    border-radius: 2px;
+    margin: 5px auto;
+    background-color: rgb(255, 255, 255);
+    transition: all 0.3s ease-in-out;
+} */
+
+/* @media(max-width:768px){
+    .hamburguer{
+        display: block;
+    }
+
+    .hamburguer.active .bar:nth-child(2){
+        opacity: 0;
+    }
+
+    .hamburguer.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburguer.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-menu{
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        border-radius: 0 0 20px 20px;
+        background-color: rgba(0, 0, 0, 0.857);
+        text-align: center;
+        flex-direction: column;
+        width: 100%;
+        transition: 0.3s;
+    }
+
+    .item{
+        margin: 16px 0;
+    }
+
+    .nav-menu.active{
+        left: 0;
+    }
+} */
+
+
+
