@@ -16,10 +16,10 @@
     <div class="container-fluid min-vh-100 d-flex flex-column">
 
         <!-- linha onde fica o olá mundo -->
-        <div class="row 01" style="background-color: aqua;">
+        <div class="row 01">
             <!-- coluna do texto olá mundo -->
             <div class="col">
-                <h3 class="text-dark mx-5 my-5">Olá mundo!</h3>
+                <h3 class="text-dark mx-5 my-5">Olá, mundo!</h3>
             </div>
 
         </div>
@@ -28,22 +28,59 @@
          <div class="row 02 flex-grow-1">
 
             <!-- coluna dos botões sobre mim, skills e projetos -->
-            <div class="col" style="background-color: rgb(255, 255, 0);">
-                <h1>botões</h1>
+            <div class="col">
+                <div class="d-flex flex-column justify-content-center align-items-center">
+                    <button type="button" class="btn btn-dark">icon</button>
+                    <h4 class="text-center fw-bold">Sobre mim</h4>
+                </div>
+                
+                <div class="d-flex flex-column justify-content-center align-items-center">
+                    <button type="button" class="btn btn-primary">icon</button>
+                    <h4 class="text-center fw-bold">Minhas skills</h4>
+                </div>
+                
+                <div class="d-flex flex-column justify-content-center align-items-center">
+                    <button type="button" class="btn btn-warning">icon</button>
+                    <h4 class="text-center fw-bold">Meus projetos</h4>
+                </div>
+                
             </div>
 
             <!-- coluna da imagem com o circulo de fundo -->
-            <div class="col" style="background-color: black;">
-                <h1>imagem</h1>
+            {% for usuario in usuarios %}
+            <div class="col d-flex justify-content-center align-items-center">
+                <div class="circulo_black"></div>
+                <div>
+                    <img class="eu img-fluid" src="/media/{{usuario.foto}}">
+                </div>
             </div>
+            {% endfor %}
 
             <!-- coluna com os botões de redes sociais e contatos -->
 
-            <div class="col" style="background-color: rgb(255, 0, 0);">
-                <h1>botões</h1>
+            <div class="col">
+
+                <div>
+                    <h3 class="text-center fw-bold">Me chamo Marcus, <br>
+                        dev full-stack.</h3> 
+                    <h4 class="text-center fw-light">É um prazer te receber aqui!</h4>
+                </div>
+
+                <div class="d-flex flex-column justify-content-center align-items-center">
+                    <button type="button" class="btn btn-dark">icon</button>
+                    <h4 class="text-center fw-bold">Redes sociais</h4>
+                </div>
+
+                <div class="d-flex flex-column justify-content-center align-items-center">
+                    <button type="button" class="btn btn-primary">icon</button>
+                    <h4 class="fw-bold">Contatos</h4>
+                </div>
+
             </div>
 
          </div>
+
     </div>
+
 </body>
 
