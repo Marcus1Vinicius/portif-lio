@@ -85,7 +85,12 @@ ul{
 
 .circulo_black{
     background-color: #181818;
+    padding: 40% 40%;
+    border-radius: 100%;
 }
 
-
+.botoes_icon{
+    padding: 7% 10%;
+    border-radius: 20px;
+}
 
