@@ -87,10 +87,15 @@ ul{
     background-color: #181818;
     padding: 40% 40%;
     border-radius: 100%;
+    z-index: -999;
 }
 
 .botoes_icon{
     padding: 7% 10%;
     border-radius: 20px;
+    border-color: none;
 }
 
+.afastamento{
+    padding: 100px;
+}

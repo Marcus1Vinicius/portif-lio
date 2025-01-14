@@ -29,19 +29,19 @@
 
             <!-- coluna dos botões sobre mim, skills e projetos -->
             <div class="col">
-                <div class="d-flex flex-column justify-content-center align-items-center">
-                    <button type="button" class="btn botoes_icon" style="background-color: #4042F6;;">icon</button>
+                <div class="d-flex flex-column justify-content-center align-items-center afastamento">
+                    <button type="button" class="botoes_icon" style="background-color: #4042F6;;">icon</button>
                     <h4 class="text-center fw-bold">Sobre mim</h4>
                 </div>
                 
                 <div class="d-flex flex-column justify-content-center align-items-center">
-                    <button type="button" class="btn botoes_icon">icon</button>
-                    <h4 class="text-center fw-bold">Minhas skills</h4>
+                    <button type="button" class="botoes_icon" style="background-color: #8812EF;">icon</button>
+                    <h4 class="text-center fw-bold">Meus projetos</h4>
                 </div>
                 
                 <div class="d-flex flex-column justify-content-center align-items-center">
-                    <button type="button" class="btn botoes_icon">icon</button>
-                    <h4 class="text-center fw-bold">Meus projetos</h4>
+                    <button type="button" class="botoes_icon" style="background-color: #181818;">icon</button>
+                    <h4 class="text-center fw-bold">Minhas skills</h4>
                 </div>
                 
             </div>
@@ -50,7 +50,8 @@
             {% for usuario in usuarios %}
             <div class="col d-flex justify-content-center align-items-center">
                 <div class="circulo_black"></div>
-                <div>
+
+                <div class="d-flex justify-content-center align-items-center">
                     <img class="eu img-fluid" src="/media/{{usuario.foto}}">
                 </div>
             </div>
@@ -67,12 +68,12 @@
                 </div>
 
                 <div class="d-flex flex-column justify-content-center align-items-center">
-                    <button type="button" class="btn botoes_icon">icon</button>
+                    <button type="button" class="botoes_icon" style="background-color: #8812EF;">icon</button>
                     <h4 class="text-center fw-bold">Redes sociais</h4>
                 </div>
 
                 <div class="d-flex flex-column justify-content-center align-items-center">
-                    <button type="button" class="btn botoes_icon">icon</button>
+                    <button type="button" class="botoes_icon" style="background-color: #181818;">icon</button>
                     <h4 class="fw-bold">Contatos</h4>
                 </div>
 
