@@ -93,9 +93,14 @@ ul{
 .botoes_icon{
     padding: 7% 10%;
     border-radius: 20px;
-    border-color: none;
+    border: none;
 }
 
 .afastamento{
-    padding: 100px;
+    padding: 10%;
+}
+
+.icones{
+    font-size: 100%;
+    color: white;
 }
