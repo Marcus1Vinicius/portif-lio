@@ -5,13 +5,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marcus Vinicius</title>
+    <meta name="description" content="Marcus dev full-stack">
+    <meta name="keywords" content="django, python, html, css, javascript">
+    <title>Marcus Vinicius dev full-stack</title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 </head>
 
-<body style="background-image: linear-gradient(to right,#EFF0F2,#7A7B7D);">
+<body id="linear">
 
     <!-- container fluido para responsividade do site, dentro dele estará todas as rows e cols que vamos usar -->
     <div class="container-fluid min-vh-100 d-flex flex-column">
@@ -31,21 +33,21 @@
             <!-- coluna dos botões sobre mim, skills e projetos -->
             <div class="col">
                 <div class="d-flex flex-column justify-content-center align-items-center afastamento">
-                    <button type="button" class="botoes_icon" style="background-color: #4042F6;;">
+                    <button type="button" class="botoes_icon" id="azul">
                         <i class="bi bi-person-lines-fill icones"></i>
                     </button>
                     <h5 class="text-center fw-bold">Sobre mim</h5>
                 </div>
                 
                 <div class="d-flex flex-column justify-content-center align-items-center afastamento">
-                    <button type="button" class="botoes_icon" style="background-color: #8812EF;">
+                    <button type="button" class="botoes_icon" id="roxo">
                         <i class="bi bi-box icones"></i>
                     </button>
                     <h5 class="text-center fw-bold">Projetos</h5>
                 </div>
                 
                 <div class="d-flex flex-column justify-content-center align-items-center afastamento">
-                    <button type="button" class="botoes_icon" style="background-color: #181818;">
+                    <button type="button" class="botoes_icon" id="preto">
                         <i class="bi bi-patch-check-fill icones"></i>
                     </button>
                     <h4 class="text-center fw-bold">Skills</h4>
@@ -59,7 +61,7 @@
                 <div class="circulo_black"></div>
 
                 <div class="d-flex justify-content-center align-items-center soprepor">
-                    <img class="eu img-fluid" src="/media/{{usuario.foto}}">
+                    <img class="eu img-fluid" src="/media/{{usuario.foto}}" alt="foto Marcus Vinicius de Oliveira">
                 </div>
             </div>
             {% endfor %}
@@ -69,20 +71,20 @@
             <div class="col">
 
                 <div>
-                    <h3 class="text-center fw-bold">Me chamo Marcus, <br>
-                        dev full-stack.</h3> 
+                    <h1 class="text-center fw-bold h3">Me chamo Marcus, <br>
+                        dev full-stack.</h1> 
                     <h4 class="text-center fw-light">É um prazer te receber aqui!</h4>
                 </div>
 
                 <div class="d-flex flex-column justify-content-center align-items-center afastamento">
-                    <button type="button" class="botoes_icon" style="background-color: #8812EF;">
+                    <button type="button" class="botoes_icon" id="roxo">
                         <i class="bi bi-github icones"></i>
                     </button>
                     <h5 class="text-center fw-bold">Redes sociais</h5>
                 </div>
 
                 <div class="d-flex flex-column justify-content-center align-items-center afastamento">
-                    <button type="button" class="botoes_icon" style="background-color: #181818;">
+                    <button type="button" class="botoes_icon" id="preto">
                         <i class="bi bi-telegram icones"></i>
                     </button>
                     <h5 class="fw-bold">Contatos</h5>

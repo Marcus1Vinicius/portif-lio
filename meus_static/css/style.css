@@ -111,3 +111,19 @@ ul{
     font-size: 200%;
     color: white;
 }
+
+#azul{
+    background-color: #4042F6;
+}
+
+#roxo{
+    background-color: #8812EF;
+}
+
+#preto{
+    background-color: #181818;
+}
+
+#linear{
+    background-image: linear-gradient(to right,#EFF0F2,#7A7B7D);
+}
