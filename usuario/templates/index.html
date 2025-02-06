@@ -1,5 +1,4 @@
 {% load static %}
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -15,84 +14,55 @@
 
 <body id="linear">
 
-    <!-- container fluido para responsividade do site, dentro dele estará todas as rows e cols que vamos usar -->
-    <div class="container-fluid min-vh-100 d-flex flex-column">
+    <div class="conteudo">
 
-        <!-- linha onde fica o olá mundo -->
-        <div class="row 01">
-            <!-- coluna do texto olá mundo -->
-            <div class="col">
-                <h3 class="text-dark mx-5 my-5">Olá, mundo!</h3>
-            </div>
+        <div class="primeira-coluna">
+            <!-- olá mundo e minha imagem e um pequeno texto -->
+
+            <h4>Olá, mundo!</h4>
+
+            <img src="" alt="foto marcus vinicius dev full-stack">
+
+            <h1 class="h3">Me chamo Marcus, <br>
+                dev full-stack.</h1>
+            <p>É um prazer te receber aqui!</p>
 
         </div>
 
-        <!-- linha onde fica os botões de sobre mim, skills, projetos, minha foto e os botões de contato e redes sociais, elá será dividida em três colunas inicialmente. -->
-         <div class="row 02 flex-grow-1">
+        <div class="segunda-coluna">
+            <!-- onde ficará o botão sobre mim -->
 
-            <!-- coluna dos botões sobre mim, skills e projetos -->
-            <div class="col">
-                <div class="d-flex flex-column justify-content-center align-items-center afastamento">
-                    <button type="button" class="botoes_icon" id="azul">
-                        <i class="bi bi-person-lines-fill icones"></i>
-                    </button>
-                    <h5 class="text-center fw-bold">Sobre mim</h5>
-                </div>
-                
-                <div class="d-flex flex-column justify-content-center align-items-center afastamento">
-                    <button type="button" class="botoes_icon" id="roxo">
-                        <i class="bi bi-box icones"></i>
-                    </button>
-                    <h5 class="text-center fw-bold">Projetos</h5>
-                </div>
-                
-                <div class="d-flex flex-column justify-content-center align-items-center afastamento">
-                    <button type="button" class="botoes_icon" id="preto">
-                        <i class="bi bi-patch-check-fill icones"></i>
-                    </button>
-                    <h4 class="text-center fw-bold">Skills</h4>
-                </div>
-                
-            </div>
+            <button type="button" class="botoes_icon" id="azul">
+                <i class="bi bi-person-lines-fill icones"></i>
+            </button>
+            <h5 class="text-center fw-bold">Sobre mim</h5>
 
-            <!-- coluna da imagem com o circulo de fundo -->
-            {% for usuario in usuarios %}
-            <div class="col d-flex justify-content-center align-items-center">
-                <div class="circulo_black"></div>
+        </div>
 
-                <div class="d-flex justify-content-center align-items-center soprepor">
-                    <img class="eu img-fluid" src="/media/{{usuario.foto}}" alt="foto Marcus Vinicius de Oliveira">
-                </div>
-            </div>
-            {% endfor %}
+        <div class="terceira-coluna">
+            <!-- onde ficará os botões meus projetos e minhas skills -->
 
-            <!-- coluna com os botões de redes sociais e contatos -->
+            <button type="button" class="botoes_icon" id="roxo">
+                <i class="bi bi-box icones"></i>
+            </button>
+            <h5 class="text-center fw-bold">Projetos</h5>
 
-            <div class="col">
+            <button type="button" class="botoes_icon" id="preto">
+                <i class="bi bi-patch-check-fill icones"></i>
+            </button>
+            <h4 class="text-center fw-bold">Skills</h4>
 
-                <div>
-                    <h1 class="text-center fw-bold h3">Me chamo Marcus, <br>
-                        dev full-stack.</h1> 
-                    <h4 class="text-center fw-light">É um prazer te receber aqui!</h4>
-                </div>
+        </div>
 
-                <div class="d-flex flex-column justify-content-center align-items-center afastamento">
-                    <button type="button" class="botoes_icon" id="roxo">
-                        <i class="bi bi-github icones"></i>
-                    </button>
-                    <h5 class="text-center fw-bold">Redes sociais</h5>
-                </div>
+        <div class="quarta-coluna">
+            <!-- onde ficará o botão contatos -->
 
-                <div class="d-flex flex-column justify-content-center align-items-center afastamento">
-                    <button type="button" class="botoes_icon" id="preto">
-                        <i class="bi bi-telegram icones"></i>
-                    </button>
-                    <h5 class="fw-bold">Contatos</h5>
-                </div>
+            <button type="button" class="botoes_icon" id="roxo">
+                <i class="bi bi-github icones"></i>
+            </button>
+            <h5 class="text-center fw-bold">Contatos</h5>
 
-            </div>
-
-         </div>
+        </div>
 
     </div>
 
