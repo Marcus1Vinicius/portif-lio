@@ -8,79 +8,13 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Lilita+One&family=Oswald:wght@200..700&display=swap');
 
-.links{
-    text-decoration: none;
-    color: rgb(0, 0, 0);
-    font-size: 2.5vh;
-    font-family: 'Inria Sans', sans-serif;
-    font-weight: bold;
-}
 
 .sobre_user{
     font-family: 'Inria Sans', sans-serif;
 }
 
-.eu{
-    width: 55vh;
-}
-
 p{
     font-size: 2.5vh;
-}
-
-.sobre_mim{
-padding-top: 10vh;
-}
-
-ul{
-    list-style: none;
-}
-
-.nome {
-    border-radius: 10px;
-    padding: 10px;
-    display: inline-block;
-    font-family: 'Inria Sans', sans-serif;
-    font-weight: bold;
-    color: black;
-}
-
-.titulos{
-    border-radius: 10px;
-    padding: 10px;
-    display: inline-block;
-    font-family: 'Inria Sans', sans-serif;
-    font-weight: bold;
-    color: black;
-}
-
-.custom-ul {
-    display: flex;
-    justify-content: flex-start;
-    padding: 0;
-    margin: 0;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    list-style: none;
-    scrollbar-width: thin;
-}
-
-
-.custom-ul li {
-  flex: 0 0 auto;
-  margin-right: 15px;
-  text-align: center;
-  display: inline-block;
-}
-
-.flex{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.divisao{
-    margin-top: 10%;
 }
 
 .circulo_black{
@@ -112,15 +46,15 @@ ul{
     color: white;
 }
 
-#azul{
+.azul{
     background-color: #4042F6;
 }
 
-#roxo{
+.roxo{
     background-color: #8812EF;
 }
 
-#preto{
+.preto{
     background-color: #181818;
 }
 

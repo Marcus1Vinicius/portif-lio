@@ -7,7 +7,7 @@
     <meta name="description" content="Marcus dev full-stack">
     <meta name="keywords" content="django, python, html, css, javascript">
     <title>Marcus Vinicius dev full-stack</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" >
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 </head>
@@ -16,54 +16,51 @@
 
     <div class="conteudo">
 
-        <div class="primeira-coluna">
+        <div class="primeira-linha">
             <!-- olá mundo e minha imagem e um pequeno texto -->
 
             <h4>Olá, mundo!</h4>
-
-            <img src="" alt="foto marcus vinicius dev full-stack">
+            {% for usuario in usuarios %}
+            <img src="/media/{{usuario.foto}}" alt="Marcus Vinicius dev full-stack">
 
             <h1 class="h3">Me chamo Marcus, <br>
                 dev full-stack.</h1>
             <p>É um prazer te receber aqui!</p>
-
+            {% endfor %}
         </div>
 
-        <div class="segunda-coluna">
+        <div class="segunda-linha">
             <!-- onde ficará o botão sobre mim -->
+            <div class="coluna-1">
+                <button type="button" class="botoes_icon azul">
+                    <i class="bi bi-person-lines-fill icones"></i>
+                </button>
+                <h5 class="text-center fw-bold">Sobre mim</h5>
+            </div>
 
-            <button type="button" class="botoes_icon" id="azul">
-                <i class="bi bi-person-lines-fill icones"></i>
-            </button>
-            <h5 class="text-center fw-bold">Sobre mim</h5>
+            <div class="coluna-2">
+                <!-- onde ficará os botões de projetos e skills -->
+                <button type="button" class="botoes_icon roxo">
+                    <i class="bi bi-box icones"></i>
+                </button>
+                <h5 class="text-center fw-bold">Projetos</h5>
 
+                <button type="button" class="botoes_icon preto">
+                    <i class="bi bi-patch-check-fill icones"></i>
+                </button>
+                <h4 class="text-center fw-bold">Skills</h4>
+
+            </div>
+
+            <div class="coluna-3">
+                <!-- onde ficará o botão contatos -->
+                <button type="button" class="botoes_icon roxo">
+                    <i class="bi bi-github icones"></i>
+                </button>
+                <h5 class="text-center fw-bold">Contatos</h5>
+            </div>
+            
         </div>
-
-        <div class="terceira-coluna">
-            <!-- onde ficará os botões meus projetos e minhas skills -->
-
-            <button type="button" class="botoes_icon" id="roxo">
-                <i class="bi bi-box icones"></i>
-            </button>
-            <h5 class="text-center fw-bold">Projetos</h5>
-
-            <button type="button" class="botoes_icon" id="preto">
-                <i class="bi bi-patch-check-fill icones"></i>
-            </button>
-            <h4 class="text-center fw-bold">Skills</h4>
-
-        </div>
-
-        <div class="quarta-coluna">
-            <!-- onde ficará o botão contatos -->
-
-            <button type="button" class="botoes_icon" id="roxo">
-                <i class="bi bi-github icones"></i>
-            </button>
-            <h5 class="text-center fw-bold">Contatos</h5>
-
-        </div>
-
     </div>
 
 </body>
