@@ -78,7 +78,7 @@ p{
 
 .segunda-linha{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .coluna-1{
@@ -118,6 +118,34 @@ p{
     justify-content: center;
     text-align: center;
 }
+
+/* regras de verificação de tamanho de tela no css são chamadas de break points */
+
+/* tela de computador */
+@media (min-width:1024px){
+
+    .conteudo{
+        height: 100vh;
+        width: 50%;
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+    }
+
+}
+
+/* tela de tablet */
+@media (min-width:768px){
+
+    .conteudo{
+        height: 100vh;
+        width: 70%;
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+    }
+
+}
+
+
 
 
 
