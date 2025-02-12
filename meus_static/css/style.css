@@ -32,8 +32,8 @@ p{
 }
 
 .botoes_icon{
-    padding: 11% 15%;
-    border-radius: 20px;
+    padding: 20% 30%;
+    border-radius: 40px;
     border: none;
 }
 
@@ -72,7 +72,7 @@ p{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: end;
     text-align: center;
 }
 
@@ -86,15 +86,16 @@ p{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    text-align: center;
+    text-align: left;
 }
+
 
 .coluna-3{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    text-align: center;
+    text-align: right;
 }
 
 .coluna-2{
@@ -117,3 +118,6 @@ p{
     justify-content: center;
     text-align: center;
 }
+
+
+
