@@ -18,7 +18,6 @@
 
         <div class="primeira-linha">
             <!-- olá mundo e minha imagem e um pequeno texto -->
-
             <h4>Olá, mundo!</h4>
             {% for usuario in usuarios %}
             <img src="/media/{{usuario.foto}}" alt="Marcus Vinicius dev full-stack">
@@ -40,15 +39,19 @@
 
             <div class="coluna-2">
                 <!-- onde ficará os botões de projetos e skills -->
-                <button type="button" class="botoes_icon roxo">
-                    <i class="bi bi-box icones"></i>
-                </button>
-                <h5 class="text-center fw-bold">Projetos</h5>
+                <div class="botao-projetos">
+                    <button type="button" class="botoes_icon roxo">
+                        <i class="bi bi-box icones"></i>
+                    </button>
+                    <h4 class="text-center fw-bold">Projetos</h4>
+                </div>
 
-                <button type="button" class="botoes_icon preto">
-                    <i class="bi bi-patch-check-fill icones"></i>
-                </button>
-                <h4 class="text-center fw-bold">Skills</h4>
+                <div class="botao-skills">
+                    <button type="button" class="botoes_icon preto">
+                        <i class="bi bi-patch-check-fill icones"></i>
+                    </button>
+                    <h4 class="text-center fw-bold">Skills</h4>
+                </div>
 
             </div>
 
@@ -61,6 +64,7 @@
             </div>
             
         </div>
+        
     </div>
 
 </body>

@@ -32,7 +32,7 @@ p{
 }
 
 .botoes_icon{
-    padding: 4% 8%;
+    padding: 11% 15%;
     border-radius: 20px;
     border: none;
 }
@@ -60,4 +60,60 @@ p{
 
 #linear{
     background-image: linear-gradient(to right,#EFF0F2,#7A7B7D);
+}
+
+.conteudo{
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.primeira-linha{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.segunda-linha{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.coluna-1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.coluna-3{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.coluna-2{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.botao-projetos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.botao-skills{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
