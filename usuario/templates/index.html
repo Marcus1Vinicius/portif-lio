@@ -17,33 +17,24 @@
     <div class="conteudo">
 
         <div class="primeira-linha">
-            <!-- olá mundo e minha imagem e um pequeno texto -->
-            <h4>Olá, mundo!</h4>
-            {% for usuario in usuarios %}
-            <img src="/media/{{usuario.foto}}" alt="Marcus Vinicius dev full-stack">
 
-            <h1 class="h3">Me chamo Marcus, <br>
-                dev full-stack.</h1>
-            <p>É um prazer te receber aqui!</p>
-            {% endfor %}
-        </div>
+            <h4 class="hello">Olá, mundo!</h4>
 
-        <div class="segunda-linha">
-            <!-- onde ficará o botão sobre mim -->
+                        
             <div class="coluna-1">
-                <button type="button" class="botoes_icon azul">
-                    <i class="bi bi-person-lines-fill icones"></i>
-                </button>
-                <h5 class="fw-bold">Sobre mim</h5>
-            </div>
 
-            <div class="coluna-2">
-                <!-- onde ficará os botões de projetos e skills -->
-                <div class="botao-projetos">
+                <div class="botao-sobre-mim">
+                    <button type="button" class="botoes_icon azul">
+                        <i class="bi bi-person-lines-fill icones"></i>
+                    </button>
+                    <h5 class="fw-bold">Sobre mim</h5>
+                </div>
+
+                <div class="botao-redes-sociais">
                     <button type="button" class="botoes_icon roxo">
                         <i class="bi bi-box icones"></i>
                     </button>
-                    <h4 class="fw-bold">Projetos</h4>
+                    <h4 class="fw-bold">Redes sociais</h4>
                 </div>
 
                 <div class="botao-skills">
@@ -52,18 +43,53 @@
                     </button>
                     <h4 class="fw-bold">Skills</h4>
                 </div>
-            </div>
 
-            <div class="coluna-3">
-                <!-- onde ficará o botão contatos -->
-                <button type="button" class="botoes_icon roxo">
-                    <i class="bi bi-github icones"></i>
-                </button>
-                <h5 class="fw-bold">Contatos</h5>
             </div>
             
         </div>
-        
+
+        <div class="segunda-linha">
+
+            <div>
+                <!-- circulo black -->
+            </div>
+            {% for usuario in usuarios %}
+            <div class="minha-imagem">
+                <img src="/media/{{usuario.foto}}" alt="Marcus Vinicius dev full-stack">
+            </div>
+            {% endfor %}
+        </div>
+
+        <div class="terceira-linha">
+
+            <div class="textos-apresentacao">
+                <strong>
+                    <h1 class="titulo">Me chamo Marcus, <br>
+                        dev full-stack JR.</h1>
+                </strong> 
+                <p>É um prazer te receber aqui!</p>
+            </div>
+
+            <div class="botoes-contato-projetos">
+
+                <div class="botao-contatos">
+                    <button type="button" class="botoes_icon roxo">
+                        <i class="bi bi-github icones"></i>
+                    </button>
+                    <h5 class="fw-bold">Contatos</h5>
+                </div>
+
+                <div class="botao-projetos">
+                    <button type="button" class="botoes_icon azul">
+                        <i class="bi bi-github icones"></i>
+                    </button>
+                    <h5 class="fw-bold">Projetos</h5>
+                </div>
+
+            </div>
+
+        </div>
+            
     </div>
 
 </body>

@@ -42,7 +42,7 @@ p{
 }
 
 .icones{
-    font-size: 4.5vh;
+    font-size: 2.5vh;
     color: white;
 }
 
@@ -68,57 +68,51 @@ p{
     grid-template-rows: 1fr 1fr;
 }
 
+.botoes_icon{
+    padding: 10% 10%;
+    border-radius: 40px;
+    border: none;
+}
+
 .primeira-linha{
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
     align-items: center;
-    justify-content: end;
+    justify-content: center;
     text-align: center;
 }
 
 .segunda-linha{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.terceira-linha{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.botoes-contato-projetos{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .coluna-1{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: left;
-}
-
-
-.coluna-3{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: right;
-}
-
-.coluna-2{
     display: grid;
-    grid-template-rows: 1fr 1fr;
-}
-
-.botao-projetos{
-    display: flex;
-    flex-direction: column;
+    grid-template-columns: repeat(3, 1fr);
     align-items: center;
     justify-content: center;
     text-align: center;
 }
-
-.botao-skills{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
 /* regras de verificação de tamanho de tela no css são chamadas de break points */
 
 /* tela de computador */
@@ -135,34 +129,7 @@ p{
 
 /* tela de tablet */
 @media (min-width:768px){
-
-    .icones{
-        font-size: 6vh;
-        color: white;
-    }
-
-    .botoes_icon{
-        padding: 10% 22%;
-        border-radius: 50px;
-        border: none;
-    }
     
-    .primeira-linha{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        font-size: 3vh;
-    }
-
-    .titulo{
-        font-size: 3.5vh;
-    }
-
-    .hello{
-        font-size: 3vh;
-    }
 }
 
 
