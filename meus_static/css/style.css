@@ -31,23 +31,22 @@ p{
     position: relative;
 }
 
-.botoes_icon{
-    padding: 15% 25%;
-    border-radius: 40px;
-    border: none;
-}
-
-.afastamento{
-    padding: 10%;
-}
-
 .icones{
-    font-size: 2.5vh;
+    font-size: 3vh;
+    color: white;
+}
+
+.icones-maiores{
+    font-size: 5.5vh;
     color: white;
 }
 
 .azul{
     background-color: #4042F6;
+}
+
+.titulo{
+    font-size: 22px;
 }
 
 .roxo{
@@ -59,26 +58,25 @@ p{
 }
 
 #linear{
-    background-image: linear-gradient(to right,#EFF0F2,#7A7B7D);
+    background-image: linear-gradient(to right,#EFF0F2,#999a9c);
+}
+
+.hello{
+    font-size: 30px;
 }
 
 .conteudo{
-    height: 100vh;
+    width: 100%;
+    min-height: 100vh;
     display: grid;
-    grid-template-rows: 1fr 1fr;
-}
-
-.botoes_icon{
-    padding: 10% 10%;
-    border-radius: 40px;
-    border: none;
+    grid-template-rows: 1fr 25% 1fr;
 }
 
 .primeira-linha{
     display: grid;
     grid-template-rows: repeat(2, 1fr);
     align-items: center;
-    justify-content: center;
+    justify-content: stretch;
     text-align: center;
 }
 
@@ -92,9 +90,9 @@ p{
 
 .terceira-linha{
     display: grid;
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: 25% 1fr;
     align-items: center;
-    justify-content: center;
+    justify-content: stretch;
     text-align: center;
 }
 
@@ -113,23 +111,59 @@ p{
     justify-content: center;
     text-align: center;
 }
+
+.botoes_icon{
+    border-radius: 20px;
+    border: none;
+    width: 90px;
+    height: 70px;
+}
+
+.botoes_maiores{
+    border-radius: 20px;
+    border: none;
+    width: 140px;
+    height: 120px;
+}
+
 /* regras de verificação de tamanho de tela no css são chamadas de break points */
 
 /* tela de computador */
 @media (min-width:1024px){
 
     .conteudo{
-        height: 100vh;
-        width: 50%;
-        display: grid;
-        grid-template-rows: 1fr 1fr;
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: row;
     }
+
+    .conteudo > div {
+        width: 33.3%; /* Faz cada filho ocupar um terço da tela */
+    }
+
+    .primeira-linha{
+        display: grid;
+        grid-template-rows: 25% 1fr;
+        align-items: center;
+        justify-content: stretch;
+        text-align: center;
+    }
+
+    .coluna-1{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
 
 }
 
 /* tela de tablet */
 @media (min-width:768px){
-    
+
 }
 
 
