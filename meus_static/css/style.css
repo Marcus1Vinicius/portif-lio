@@ -150,17 +150,58 @@ p{
         text-align: center;
     }
 
-    .coluna-1{
-        display: flex;
-        flex-direction: column;
+    .terceira-linha{
+        display: grid;
+        grid-template-rows: 1fr 1fr;
         align-items: center;
-        justify-content: center;
+        justify-content: stretch;
         text-align: center;
     }
 
+    .coluna-1, .botoes-contato-projetos{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        text-align: center;
+        height: 100%;
+    }
 
+    .botao-sobre-mim, .botao-skills{
+        margin-left: 30%;
+    }
+
+    .botao-projetos{
+        margin-right: 30%;
+    }
+
+
+    .botoes_icon, .botoes_maiores{
+        border-radius: 30px;
+        border: none;
+        width: 120px;
+        height: 100px;
+    }
+
+    .icones, .icones-maiores{
+        font-size: 4vh;
+        color: white;
+    }
+
+    .circulo_black{
+        background-color: #181818;
+        width: 30vw; 
+        height: 30vw;
+        border-radius: 100%;
+        z-index: 1;
+        position: absolute;
+    }
+
+    .soprepor{
+        z-index: 2;
+        position: relative;
+    }
 }
-
 /* tela de tablet */
 @media (min-width:768px){
 
