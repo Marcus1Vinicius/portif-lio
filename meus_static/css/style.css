@@ -202,9 +202,40 @@ p{
         position: relative;
     }
 }
+
 /* tela de tablet */
 @media (min-width:768px){
 
+    .botoes_icon{
+        border-radius: 20px;
+        border: none;
+        width: 130px;
+        height: 110px;
+    }
+    
+    .botoes_maiores{
+        border-radius: 20px;
+        border: none;
+        width: 160px;
+        height: 140px;
+    }
+
+    .icones{
+        font-size: 4.5vh;
+        color: white;
+    }
+
+    .hello{
+        font-size: 3.5vh;
+    }
+
+    .titulo{
+        font-size: 3vh;
+    }
+
+    .legenda{
+        font-size: 2vh;
+    }
 }
 
 
