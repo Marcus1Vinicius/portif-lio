@@ -5,6 +5,8 @@ class Usuario(models.Model):
     nome = models.CharField(max_length=15, null=False, unique=True)
     email = models.EmailField(unique=True)
     foto = models.ImageField(upload_to="usuario/", null=True)
+    foto_tablet = models.ImageField(upload_to="usuario/", null=True) #imagem de tablet
+    foto_pc = models.ImageField(upload_to="usuario/", null=True) #imagem de pc
     sobre = models.TextField()
 
     def __str__(self):

@@ -47,17 +47,21 @@
         
     </div>
 
-        <div class="segunda-linha">
-
-            <div class="circulo_black">
-                <!-- circulo black -->
-            </div>
-            {% for usuario in usuarios %}
-            <div class="minha-imagem">
-                <img class="soprepor" src="/media/{{usuario.foto}}" alt="Marcus Vinicius dev full-stack">
-            </div>
-            {% endfor %}
+    <div class="segunda-linha">
+        <div class="circulo_black">
+            <!-- circulo black -->
         </div>
+        {% for usuario in usuarios %}
+        <div class="minha-imagem">
+            <picture>
+                <source srcset="/media/{{ usuario.foto_tablet }}" media="(min-width: 768px)">
+                <source srcset="/media/{{ usuario.foto_pc }}" media="(min-width: 1024px)">
+                <img class="soprepor" src="/media/{{ usuario.foto }}" alt="{{ usuario.nome }}">
+            </picture>
+        </div>
+        {% endfor %}
+    </div>
+    
 
         <div class="terceira-linha">
 
