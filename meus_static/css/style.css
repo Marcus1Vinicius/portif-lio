@@ -214,20 +214,6 @@
         color: white;
     }
 
-    .circulo_black{
-        background-color: #181818;
-        width: 35vw; 
-        height: 35vw;
-        border-radius: 100%;
-        z-index: 1;
-        position: absolute;
-    }
-
-    .soprepor{
-        z-index: 2;
-        position: relative;
-    }
-
     .titulo{
         font-size: 3.5vh;
     }
@@ -238,6 +224,10 @@
 
     .hello{
         font-size: 4vh;
+    }
+
+    .minha_foto{
+        margin-top: 10vh;
     }
 }
 

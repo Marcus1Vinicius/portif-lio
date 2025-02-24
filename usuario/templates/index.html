@@ -48,15 +48,13 @@
     </div>
 
     <div class="segunda-linha">
-        <div class="circulo_black">
-            <!-- circulo black -->
-        </div>
         {% for usuario in usuarios %}
         <div class="minha-imagem">
             <picture>
-                <source srcset="/media/{{ usuario.foto_tablet }}" media="(min-width: 768px)">
+                <source srcset="/media/{{ usuario.foto }}" media="(max-width: 767px)">
+                <source srcset="/media/{{ usuario.foto_tablet }}" media="(min-width: 768px) and (max-width: 1023px)">
                 <source srcset="/media/{{ usuario.foto_pc }}" media="(min-width: 1024px)">
-                <img class="soprepor" src="/media/{{ usuario.foto }}" alt="{{ usuario.nome }}">
+                <img class="minha_foto img-fluid" src="/media/{{ usuario.foto_pc }}" alt="{{ usuario.nome }}">
             </picture>
         </div>
         {% endfor %}
@@ -70,7 +68,7 @@
                     <h1 class="titulo">Me chamo Marcus, <br>
                         dev full-stack JR.</h1>
                 </strong> 
-                <p>É um prazer te receber aqui!</p>
+                <p class="legenda">É um prazer te receber aqui!</p>
             </div>
 
             <div class="botoes-contato-projetos">
