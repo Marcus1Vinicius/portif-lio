@@ -231,18 +231,22 @@
     }
 }
 
-/* .modal-container{
+/* estilo do modal */
+.modal-container{
     height: 100vh;
     width: 100%;
     position: fixed;
     left: 0;
     top: 0;
-    background-color: rgba(0, 0, 0, 0.192);
+    background-color: rgba(0, 0, 0, 0.211);
     display: grid;
     place-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s;
 }
 
-.modal_body{
+.modal_conteudo {
     background-color: #1D1D1D;
     color: white;
     height: 50vh;
@@ -250,36 +254,77 @@
     padding: 40px;
     border-radius: 10px;
     text-align: center;
+    box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.788);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.modal_conteudo{
-    place-items: center;
-}
-
-.links_contatos{
+.links_contatos {
     display: flex;
     flex-direction: row;
     justify-content: stretch;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
 }
 
-#icone, #icone_zap, #icone_telegram, #icone_email{
+#icone, #icone_zap, #icone_telegram, #icone_email {
     font-size: 5vh;
     margin: 20px;
 }
 
-#icone_telegram{
+#icone_telegram {
     color: #30A3E6;
 }
 
-#icone_zap{
+#icone_zap {
     color: #00C44D;
 }
 
-#icone_email{
+#icone_email {
     color: #E9514F;
-} */
+}
 
+/* ----------------------------- */
+/* 🟡 Tablet (até 992px) */
+@media screen and (max-width: 992px) {
+    .modal_conteudo {
+        width: 90%;
+        height: auto;
+        padding: 30px 20px;
+    }
 
+    #icone, #icone_zap, #icone_telegram, #icone_email {
+        font-size: 4vh;
+        margin: 15px;
+    }
+}
 
+/* 🔵 Celulares (até 576px) */
+@media screen and (max-width: 576px) {
+    .modal_conteudo {
+        width: 95%;
+        height: auto;
+        padding: 20px 15px;
+    }
 
+    .modal_conteudo h1 {
+        font-size: 1.5rem;
+    }
 
+    .modal_conteudo p {
+        font-size: 0.9rem;
+        text-align: justify;
+    }
+
+    .links_contatos {
+        justify-content: center;
+    }
+
+    #icone, #icone_zap, #icone_telegram, #icone_email {
+        font-size: 3.5vh;
+        margin: 10px;
+    }
+}
