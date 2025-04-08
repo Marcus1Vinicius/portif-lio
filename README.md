@@ -103,11 +103,5 @@ Acesse o projeto no navegador:
 - `templates/`: Templates HTML
 - `media/`: Imagens carregadas via admin
 
----
 
-### 📬 Contato
-
-Caso tenha dúvidas ou sugestões, entre em contato:  
-📧 marcus.oliveira.dev@gmail.com  
-🔗 [LinkedIn](https://www.linkedin.com/in/marcus1vinicius/)
 
