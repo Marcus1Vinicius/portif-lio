@@ -23,6 +23,7 @@ from usuario import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('modal/sobre/', views.modal_sobre, name='modal_sobre'),
     path('', views.index, name='index'),
 ]
 

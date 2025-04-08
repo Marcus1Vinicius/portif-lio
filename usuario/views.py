@@ -13,4 +13,10 @@ def index(request):
     context['redes'] = redes_sociais
     return render(request, 'index.html', context)
 
+def modal_sobre(request):
+    usuarios = Usuario.objects.all()
+    context={}
+    context['usuarios'] = usuarios
+    return render(request, 'modal_sobre_mim.html', context)
+
 
