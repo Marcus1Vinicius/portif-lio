@@ -9,10 +9,12 @@
         <div class="coluna-1">
 
             <div class="botao-sobre-mim">
-                <button type="button" class="botoes_icon azul abrir-modal" data-url="{% url 'modal_sobre' %}">
-                    <i class="bi bi-person-lines-fill icones"></i>
-                </button>
-                <h5 class="my-2">Sobre</h5>
+                <a href="{% url 'modal_sobre' %}" class="link">
+                    <button type="button" class="botoes_icon azul abrir-modal">
+                        <i class="bi bi-person-lines-fill icones"></i>
+                    </button>
+                    <h5 class="my-2">Sobre</h5>
+                </a>
             </div>
 
             <div class="botao-redes-sociais">
