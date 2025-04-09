@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from .models import Usuario, Skill, Projeto, Rede_Social
+from django.template.loader import render_to_string
+from django.http import JsonResponse
 
 def index(request):
     usuarios = Usuario.objects.all()
@@ -15,8 +17,12 @@ def index(request):
 
 def modal_sobre(request):
     usuarios = Usuario.objects.all()
+    redes_sociais = Rede_Social.objects.all()
     context={}
     context['usuarios'] = usuarios
-    return render(request, 'modal_sobre_mim.html', context)
+    context['redes'] = redes_sociais
+    html_do_modal = render_to_string('modal_sobre_mim.html', context, request=request)
+    return JsonResponse({'CONTEUDO DO MODAL': html_do_modal})
+
 
 
