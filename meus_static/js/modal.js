@@ -1,5 +1,5 @@
 // 1. Selecionar os elementos
-const abrirModalBtn = document.querySelector('.abrir_modal_sobre');
+const abrirModalBtn = document.querySelector('#abrir_modal_sobre');
 const modalContainer = document.querySelector('.modal-container');
 const modalConteudo = document.querySelector('.modal_conteudo');
 
@@ -24,6 +24,10 @@ modalContainer.addEventListener('click', (event) => {
         fecharModal();
     }
 });
+
+$.ajax({
+    
+})
 
 // // Exemplo com AJAX
 // $.ajax({
