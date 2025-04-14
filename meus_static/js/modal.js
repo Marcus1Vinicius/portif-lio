@@ -1,43 +1,35 @@
-// 1. Selecionar os elementos
-const abrirModalBtn = document.querySelector('#abrir_modal_sobre');
-const modalContainer = document.querySelector('.modal-container');
-const modalConteudo = document.querySelector('.modal_conteudo');
+document.addEventListener('DOMContentLoaded', function () {
+    const abrirModalBtn = document.querySelector('#abrir_modal_sobre');
+    const modalContainer = document.querySelector('#modal_body');
 
-// 2. Função para abrir o modal
-function abrirModal() {
-    modalContainer.style.opacity = '1';
-    modalContainer.style.pointerEvents = 'auto';
-}
+    abrirModalBtn.addEventListener('click', function () {
+        // Faz a requisição AJAX
+        $.ajax({
+            url: '/modal/sobre/',
+            type: 'GET',
+            success: function (response) {
+                // Insere o HTML retornado no modal
+                modalContainer.innerHTML = response.html_form;
 
-// 3. Função para fechar o modal
-function fecharModal() {
-    modalContainer.style.opacity = '0';
-    modalContainer.style.pointerEvents = 'none';
-}
+                // Mostra o modal (ajuste conforme sua lógica de exibição)
+                modalContainer.style.opacity = '1';
+                modalContainer.style.pointerEvents = 'auto';
 
-// 4. Event Listeners
-abrirModalBtn.addEventListener('click', abrirModal);
-
-modalContainer.addEventListener('click', (event) => {
-    // Verifica se o clique foi fora do conteúdo do modal
-    if (!modalConteudo.contains(event.target)) {
-        fecharModal();
-    }
+                // Adiciona listener de clique para fechar ao clicar fora
+                const modalConteudo = modalContainer.querySelector('.modal_conteudo');
+                modalContainer.addEventListener('click', function (event) {
+                    if (!modalConteudo.contains(event.target)) {
+                        modalContainer.style.opacity = '0';
+                        modalContainer.style.pointerEvents = 'none';
+                    }
+                });
+            },
+            error: function (xhr, status, error) {
+                console.error('Erro ao carregar o modal:', error);
+            }
+        });
+    });
 });
 
-$.ajax({
-    
-})
 
-// // Exemplo com AJAX
-// $.ajax({
-//     url: 'modal/sobre/',
-//     type: 'GET',
-//     success: function(response) {
-//         // Insere o HTML do modal no DOM
-//         $('#container-do-modal').html(response.html_modal);
-        
-//         // Abre o modal (exemplo com Bootstrap)
-//         $('#meuModal').modal('show');
-//     }
-// });
+

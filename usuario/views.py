@@ -18,11 +18,20 @@ def index(request):
 def modal_sobre(request):
     usuarios = Usuario.objects.all()
     redes_sociais = Rede_Social.objects.all()
+    data = dict()
     context={}
     context['usuarios'] = usuarios
     context['redes'] = redes_sociais
-    html_do_modal = render_to_string('modal_sobre_mim.html', context, request=request)
-    return JsonResponse({'CONTEUDO DO MODAL': html_do_modal})
+    data['html_form'] = render_to_string('modal_sobre_mim.html', context, request=request)
+    data['status_code'] = 200
+    return JsonResponse(data)
 
-
-
+# def modal_sobre(request):
+#     usuarios = Usuario.objects.all()
+#     redes_sociais = Rede_Social.objects.all()
+#     data = dict()
+#     context={}
+#     context['usuarios'] = usuarios
+#     context['redes'] = redes_sociais
+#     data = render_to_string('modal_sobre_mim.html', context, request=request)
+#     return JsonResponse({'html_modal': data, 'status_code': 200})

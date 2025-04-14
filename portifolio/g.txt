@@ -1,0 +1,209 @@
+esse é o index.html onde o modal vai ser carregado
+{% extends 'base.html' %}
+{% block content %}
+    <div class="conteudo">
+
+        <div class="primeira-linha">
+
+            <h3 class="hello">Olá, mundo!</h3>
+       
+        <div class="coluna-1">
+
+            <div class="botao-sobre-mim">
+                <!-- href="{% url 'modal_sobre' %}" é a partir desse botão que farei a requisição AJAX -->
+                    <button type="button" class="botoes_icon azul" id="abrir_modal_sobre">
+                        <i class="bi bi-person-lines-fill icones"></i>
+                    </button>
+                    <h5 class="my-2">Sobre</h5>
+            </div>
+
+            <div class="botao-redes-sociais">
+                <button type="button" class="botoes_icon roxo">
+                    <i class="bi bi-github icones"></i>
+                </button>
+                <h5 class="my-2">Redes</h5>
+            </div>
+
+            <div class="botao-skills">
+                <button type="button" class="botoes_icon preto">
+                    <i class="bi bi-patch-check-fill icones"></i>
+                </button>
+                <h5 class="my-2">Skills</h5>
+            </div>
+
+        </div>
+        
+    </div>
+
+    <div class="segunda-linha">
+        {% for usuario in usuarios %}
+        <div class="minha-imagem">
+            <picture>
+                <source srcset="/media/{{ usuario.foto }}" media="(max-width: 767px)">
+                <source srcset="/media/{{ usuario.foto_tablet }}" media="(min-width: 768px) and (max-width: 1023px)">
+                <source srcset="/media/{{ usuario.foto_pc }}" media="(min-width: 1024px)">
+                <img class="minha_foto img-fluid" src="/media/{{ usuario.foto_pc }}" alt="{{ usuario.nome }}">
+            </picture>
+        </div>
+        {% endfor %}
+    </div>
+    
+
+        <div class="terceira-linha">
+
+            <div class="textos-apresentacao">
+                <strong>
+                    <h1 class="titulo">Me chamo Marcus, <br>
+                        dev full-stack JR.</h1>
+                </strong> 
+                <p class="legenda">É um prazer te receber aqui!</p>
+            </div>
+
+            <div class="botoes-contato-projetos">
+
+                <div class="botao-contatos">
+                    <button type="button" class="botoes_maiores roxo">
+                        <i class="bi bi-telegram icones-maiores"></i>
+                    </button>
+                    <h5 class="my-2">Contatos</h5>
+                </div>
+
+                <div class="botao-projetos">
+                    <button type="button" class="botoes_maiores azul">
+                        <i class="bi bi bi-box icones-maiores"></i>
+                    </button>
+                    <h5 class="my-2">Projetos</h5>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- vou fazer o seguinte, os modais estarão em páginas html separadas para cada um deles, para que eu não tenha muito código em uma unica página e eu basicamente farei com que o modal seja chamado quando o usuário clicar no botão, assim como no redirecionamento de páginas nas url do Django, porém o usuário não mudara de página quando ativar um dos modais. -->
+            
+
+        <div class="modal-container" id="modal_body">
+            <!-- é aqui onde vamos carregar o modal sobre_mim -->
+        </div>
+
+    </div>
+    {% block scripts %}
+    {% endblock %}
+
+{% endblock %}
+
+esse é o modal_sobre_mim.html onde está a estrutura do modal:
+{% block content %}
+    <div class="modal_conteudo">
+        {% for usuario in usuarios %}
+            <h1>{{ usuario.nome }}</h1>
+            <p>{{ usuario.sobre }}</p>
+
+            <div class="contatos">
+                <h1>Contatos</h1>
+
+                <div class="links_contatos">
+                    <a href="link_whatsapp"><i class="bi bi-whatsapp" id="icone_zap"></i></a>
+                    <a href="link_email"><i class="bi bi-envelope-at-fill" id="icone_email"></i></a>
+                    <a href="link_telegram"><i class="bi bi-telegram" id="icone_telegram"></i></a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
+
+{% block scripts %}
+{% endblock %}
+essa são as views:
+from django.shortcuts import render
+from .models import Usuario, Skill, Projeto, Rede_Social
+from django.template.loader import render_to_string
+from django.http import JsonResponse
+
+def index(request):
+    usuarios = Usuario.objects.all()
+    skills = Skill.objects.all()
+    projetos = Projeto.objects.all()
+    redes_sociais = Rede_Social.objects.all()
+    context={}
+    context['usuarios'] = usuarios
+    context['skills'] = skills
+    context['projetos'] = projetos
+    context['redes'] = redes_sociais
+    return render(request, 'index.html', context)
+
+def modal_sobre(request):
+    usuarios = Usuario.objects.all()
+    redes_sociais = Rede_Social.objects.all()
+    data = dict()
+    context={}
+    context['usuarios'] = usuarios
+    context['redes'] = redes_sociais
+    data = render_to_string('modal_sobre_mim.html', context, request=request)
+    return JsonResponse({'html_modal': data, 'status_code': 200})
+
+e o js responsável por fazer acontecer:
+
+document.addEventListener('DOMContentLoaded', function() {
+    // 1. Selecionar os elementos
+    const abrirModalBtn = document.querySelector('#abrir_modal_sobre');
+    const modalContainer = document.querySelector('.modal-container');
+    const modalConteudo = document.querySelector('.modal_conteudo');
+
+    // 2. Função para abrir o modal com conteúdo AJAX
+    function abrirModalComConteudo() {
+        // Faz a requisição AJAX
+        fetch("{% url 'modal_sobre' %}")  // Usa a template tag do Django
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Erro na requisição');
+                }
+                return response.json();
+            })
+            .then(data => {
+                // Insere o conteúdo no modal
+                modalConteudo.innerHTML = data.html_modal;
+                // Exibe o modal
+                modalContainer.style.opacity = '1';
+                modalContainer.style.pointerEvents = 'auto';
+            })
+            .catch(error => {
+                console.error('Erro:', error);
+                modalConteudo.innerHTML = '<p>Erro ao carregar conteúdo</p>';
+                modalContainer.style.opacity = '1';
+                modalContainer.style.pointerEvents = 'auto';
+            });
+    }
+
+    // 3. Função para fechar o modal
+    function fecharModal() {
+        modalContainer.style.opacity = '0';
+        modalContainer.style.pointerEvents = 'none';
+    }
+
+    // 4. Event Listeners
+    abrirModalBtn.addEventListener('click', abrirModalComConteudo);
+
+    modalContainer.addEventListener('click', (event) => {
+        // Verifica se o clique foi fora do conteúdo do modal
+        if (!modalConteudo.contains(event.target)) {
+            fecharModal();
+        }
+    });
+});
+
+e a url:
+from django.contrib import admin
+from django.urls import path
+from django.conf import settings
+from django.conf.urls.static import static
+from usuario import views
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('modal/sobre/', views.modal_sobre, name='modal_sobre'),
+    path('', views.index, name='index'),
+]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
