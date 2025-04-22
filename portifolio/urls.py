@@ -24,6 +24,10 @@ from usuario import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('modal/sobre/', views.modal_sobre, name='modal_sobre'),
+    path('modal/skills/', views.modal_skills, name='modal_skills'),
+    path('modal/redes/', views.modal_sobre, name='modal_redes'),
+    path('modal/projetos/', views.modal_sobre, name='modal_projetos'),
+    path('modal/contatos/', views.modal_sobre, name='modal_contatos'),    
     path('', views.index, name='index'),
 ]
 

@@ -25,3 +25,31 @@ def modal_sobre(request):
     data['html_form'] = render_to_string('modal_sobre_mim.html', context, request=request)
     data['status_code'] = 200
     return JsonResponse(data)
+
+def modal_skills(request):
+    skills = Skill.objects.all()
+    data = dict()
+    context={}
+    context['skills'] = skills
+    data['html_form'] = render_to_string('modal_skills.html', context, request=request)
+    data['status_code'] = 200
+    return JsonResponse(data)
+
+
+def modal_projetos(request):
+    projetos = Projeto.objects.all()
+    data = dict()
+    context={}
+    context['projetos'] = projetos
+    data['html_form'] = render_to_string('modal_projetos.html', context, request=request)
+    data['status_code'] = 200
+    return JsonResponse(data)
+
+def modal_redes(request):
+    redes = Rede_Social.objects.all()
+    data = dict()
+    context={}
+    context['redes'] = redes
+    data['html_form'] = render_to_string('modal_redes_sociais.html', context, request=request)
+    data['status_code'] = 200
+    return JsonResponse(data)
