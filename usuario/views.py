@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Usuario, Skill, Projeto, Rede_Social
+from .models import Usuario, Skill, Projeto, Rede_Social, Diplomas
 from django.template.loader import render_to_string
 from django.http import JsonResponse
 
@@ -51,5 +51,14 @@ def modal_redes(request):
     context={}
     context['redes'] = redes
     data['html_form'] = render_to_string('modal_redes_sociais.html', context, request=request)
+    data['status_code'] = 200
+    return JsonResponse(data)
+
+def modal_formacoes(request):
+    diploma = Diplomas.objects.all()
+    data = dict()
+    context={}
+    context['diploma'] = diploma
+    data['html_form'] = render_to_string('modal_diplomas.html', context, request=request)
     data['status_code'] = 200
     return JsonResponse(data)

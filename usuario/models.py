@@ -40,3 +40,12 @@ class Projeto(models.Model):
 
     def __str__(self):
         return self.nome
+
+class Diplomas(models.Model):
+    instituicao = models.CharField(max_length=15, null=False, unique = True)
+    foto = models.ImageField(upload_to="projetos/", null=True)
+    sobre = models.TextField()
+    dono = models.ForeignKey(Usuario, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.instituicao
