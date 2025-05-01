@@ -285,11 +285,11 @@
 }
 
 #icone_zap {
-    color: #00C44D;
+    color: #27c93f;
 }
 
 #icone_email {
-    color: #E9514F;
+    color: #ff5f56;
 }
 
 /* ----------------------------- */
@@ -331,5 +331,60 @@
     #icone, #icone_zap, #icone_telegram, #icone_email {
         font-size: 3.5vh;
         margin: 10px;
+    }
+}
+
+
+.modal_conteudo {
+    background-color: #1e1e1e;
+    color: #d4d4d4;
+    max-width: 600px;
+    max-height: 90vh;
+    overflow-y: auto;
+    font-family: 'Fira Code', monospace;
+    position: relative;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* Botões do topo estilo MacOS */
+.modal_conteudo::after {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    width: 36px;
+    height: 12px;
+    background: radial-gradient(circle at 6px 6px, #ff5f56 5px, transparent 6px),
+                radial-gradient(circle at 18px 6px, #ffbd2e 5px, transparent 6px),
+                radial-gradient(circle at 30px 6px, #27c93f 5px, transparent 6px);
+    background-repeat: no-repeat;
+}
+
+/* Cards roláveis dentro do modal */
+.estrutura_cards {
+    display: flex;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    gap: 16px;
+    padding: 2vh;
+    max-width: 100%;
+    box-sizing: border-box;
+    scrollbar-width: thin;
+    scrollbar-color: #888 #1e1e1e;
+    place-items: center;
+}
+
+.rolagem {
+    flex: 0 0 auto;
+    margin-right: 15px;
+    text-align: center;
+    display: inline-block;
+    width: 18rem;
+}
+
+/* 🔵 Celulares (até 576px) - ajustes finos */
+@media screen and (max-width: 576px) {
+    .modal_conteudo {
+        width: 85%;
     }
 }
