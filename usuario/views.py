@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Usuario, Skill, Projeto, Rede_Social, Diplomas
+from .models import Usuario, Skill, Projeto, Rede_Social, Diploma
 from django.template.loader import render_to_string
 from django.http import JsonResponse
 

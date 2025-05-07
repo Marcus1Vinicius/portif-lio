@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="modal_conteudo">
+            <div>
+                <h1>Redes Sociais</h1>
+            </div>
+            {% for rede_social in redes_sociais %}
+            <div class="estrutura_cards">
+        
+                <div class="rolagem card" style="width: 18rem;">
+                    <img src="/media/{{ projeto.foto }}" class="card-img-top" alt="Imagem do Projeto">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ rede_social.nome }}</h5>
+        
+                        <details class="colapse">
+                            <summary>Sobre</summary>
+                            <div>
+                                {{ rede_social.sobre }}
+                            </div>
+                        </details>
+        
+                        <a href="/templates/{{ rede_social.link }}" class="btn btn-dark">Link para o {{ rede_social.nome }}</a>
+                    </div>
+                </div>
+        
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
+
+{% block scripts %}
+{% endblock %}
