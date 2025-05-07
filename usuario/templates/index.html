@@ -11,21 +11,21 @@
 
             <div class="botao-sobre-mim">
                 <!-- href="{% url 'modal_sobre' %}" é a partir desse botão que farei a requisição AJAX -->
-                    <button type="button" class="botoes_icon azul" id="abrir_modal_sobre">
-                        <i class="bi bi-person-lines-fill icones"></i>
-                    </button>
+                <button type="button" class="botoes_icon azul" data-modal-url="{% url 'modal_sobre' %}">
+                    <i class="bi bi-person-lines-fill icones"></i>
+                </button>
                     <h5 class="my-2">Sobre</h5>
             </div>
 
             <div class="botao-redes-sociais">
-                <button type="button" class="botoes_icon roxo" id="abrir_modal_redes">
+                <button type="button" class="botoes_icon roxo" data-modal-url="{% url 'modal_redes' %}">
                     <i class="bi bi-github icones"></i>
                 </button>
                 <h5 class="my-2">Redes</h5>
             </div>
 
             <div class="botao-skills">
-                <button type="button" class="botoes_icon preto" id="abrir_modal_skills">
+                <button type="button" class="botoes_icon preto" data-modal-url="{% url 'modal_skills' %}">
                     <i class="bi bi-patch-check-fill icones"></i>
                 </button>
                 <h5 class="my-2">Skills</h5>
@@ -62,15 +62,15 @@
             <div class="botoes-contato-projetos">
 
                 <div class="botao-contatos">
-                    <button type="button" class="botoes_maiores roxo" id="abrir_modal_formacoes">
+                    <button type="button" class="botoes_maiores roxo" data-modal-url="{% url 'modal_formacoes' %}">
                         <i class="bi bi-telegram icones-maiores"></i>
                     </button>
                     <h5 class="my-2">Formações</h5>
                 </div>
 
                 <div class="botao-projetos">
-                    <button type="button" class="botoes_maiores azul" id="abrir_modal_projetos">
-                        <i class="bi bi bi-box icones-maiores"></i>
+                    <button type="button" class="botoes_maiores azul" data-modal-url="{% url 'modal_projetos' %}">
+                        <i class="bi bi-box icones-maiores"></i>
                     </button>
                     <h5 class="my-2">Projetos</h5>
                 </div>
