@@ -4,9 +4,9 @@
             <div>
                 <h1>Skills</h1>
             </div>
-            {% for skill in skills %}
             <div class="estrutura_cards">
-        
+
+                {% for skill in skills %}
                 <div class="rolagem card" style="width: 18rem;">
                     <img src="/media/{{ skill.foto }}" class="card-img-top" alt="Imagem da Skill">
                     <div class="card-body">
@@ -21,30 +21,11 @@
 
                     </div>
                 </div>
+                {% endfor %}
         
             </div>
-        {% endfor %}
     </div>
 {% endblock %}
 
 {% block scripts %}
 {% endblock %}
-
-        <div class="estrutura_cards">
-
-            <div class="rolagem card" style="width: 18rem;">
-                <img src="index - computador.png" class="card-img-top" alt="Imagem do Projeto">
-                <div class="card-body">
-                    <h5 class="card-title">NOME DA SKILL</h5>
-
-                    <details class="colapse">
-                        <summary>Sobre</summary>
-                        <div>
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo vero aspernatur vel accusantium,
-                            expedita sapiente ducimus quia recusandae dolor repudiandae in, enim harum velit impedit quam ea
-                            illum nihil? Natus.
-                        </div>
-                    </details>
-                </div>
-            </div>
-        </div>
