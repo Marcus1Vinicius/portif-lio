@@ -122,6 +122,139 @@
     height: 120px;
 }
 
+/* estilo do modal */
+.modal-container{
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.211);
+    display: grid;
+    place-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s;
+}
+
+.modal_conteudo {
+    background-color: #1e1e1e;
+    color: #d4d4d4;
+    width: 90%;
+    max-width: 600px;
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    font-family: 'Fira Code', monospace;
+    position: relative;
+    text-align: center;
+    place-items: center;
+}
+
+.modal_conteudo::after {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    width: 36px;
+    height: 12px;
+    background: radial-gradient(circle at 6px 6px, #ff5f56 5px, transparent 6px),
+                radial-gradient(circle at 18px 6px, #ffbd2e 5px, transparent 6px),
+                radial-gradient(circle at 30px 6px, #27c93f 5px, transparent 6px);
+    background-repeat: no-repeat;
+}
+
+  .estrutura_cards {
+    display: flex;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    gap: 16px;
+    padding: 2vh;
+    max-width: 100%;
+    box-sizing: border-box;
+    scrollbar-width: thin;
+    scrollbar-color: #888 #1e1e1e;
+    place-items: center;
+}
+
+.rolagem{
+    flex: 0 0 auto;
+    margin-right: 15px;
+    text-align: center;
+    display: inline-block;
+    width: 18rem; /* largura fixa ou responsiva */
+    
+}
+
+.links_contatos {
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+#icone, #icone_zap, #icone_telegram, #icone_email {
+    font-size: 5vh;
+    margin: 20px;
+}
+
+#icone_telegram {
+    color: #30A3E6;
+}
+
+#icone_zap {
+    color: #00C44D;
+}
+
+#icone_email {
+    color: #E9514F;
+}
+details.colapse {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease;
+  }
+  
+  details.colapse[open] {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  details.colapse summary {
+    font-weight: bold;
+    cursor: pointer;
+    list-style: none;
+    outline: none;
+    padding: 5px;
+    user-select: none;
+  }
+  
+  details.colapse summary::marker {
+    display: none; /* remove o triângulo padrão */
+  }
+  
+  details.colapse summary::after {
+    content: '➕';
+    float: right;
+    transition: transform 0.3s ease;
+  }
+  
+  details.colapse[open] summary::after {
+    content: '➖';
+  }
+  
+  details.colapse div {
+    margin-top: 10px;
+    line-height: 1.5;
+    color: #333;
+  }
+
 /* regras de verificação de tamanho de tela no css são chamadas de break points */
 
 /* tela de tablet */
@@ -156,6 +289,17 @@
 
     .legenda{
         font-size: 2vh;
+    }
+
+    .modal_conteudo {
+        width: 90%;
+        height: auto;
+        padding: 30px 20px;
+    }
+
+    #icone, #icone_zap, #icone_telegram, #icone_email {
+        font-size: 4vh;
+        margin: 15px;
     }
 }
 
@@ -236,81 +380,10 @@
     }
 }
 
-/* estilo do modal */
-.modal-container{
-    height: 100vh;
-    width: 100%;
-    position: fixed;
-    left: 0;
-    top: 0;
-    background-color: rgba(0, 0, 0, 0.211);
-    display: grid;
-    place-items: center;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.25s;
-}
-
-.modal_conteudo {
-    background-color: #1D1D1D;
-    color: white;
-    height: 50vh;
-    width: 70vh;
-    padding: 40px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.788);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.links_contatos {
-    display: flex;
-    flex-direction: row;
-    justify-content: stretch;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 20px;
-}
-
-#icone, #icone_zap, #icone_telegram, #icone_email {
-    font-size: 5vh;
-    margin: 20px;
-}
-
-#icone_telegram {
-    color: #30A3E6;
-}
-
-#icone_zap {
-    color: #27c93f;
-}
-
-#icone_email {
-    color: #ff5f56;
-}
-
-/* ----------------------------- */
-/* 🟡 Tablet (até 992px) */
-@media screen and (max-width: 992px) {
-    .modal_conteudo {
-        width: 90%;
-        height: auto;
-        padding: 30px 20px;
-    }
-
-    #icone, #icone_zap, #icone_telegram, #icone_email {
-        font-size: 4vh;
-        margin: 15px;
-    }
-}
-
 /* 🔵 Celulares (até 576px) */
 @media screen and (max-width: 576px) {
     .modal_conteudo {
-        width: 95%;
+        width: 85%;
         height: auto;
         padding: 20px 15px;
     }
@@ -331,60 +404,5 @@
     #icone, #icone_zap, #icone_telegram, #icone_email {
         font-size: 3.5vh;
         margin: 10px;
-    }
-}
-
-
-.modal_conteudo {
-    background-color: #1e1e1e;
-    color: #d4d4d4;
-    max-width: 600px;
-    max-height: 90vh;
-    overflow-y: auto;
-    font-family: 'Fira Code', monospace;
-    position: relative;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
-}
-
-/* Botões do topo estilo MacOS */
-.modal_conteudo::after {
-    content: '';
-    position: absolute;
-    top: 15px;
-    left: 20px;
-    width: 36px;
-    height: 12px;
-    background: radial-gradient(circle at 6px 6px, #ff5f56 5px, transparent 6px),
-                radial-gradient(circle at 18px 6px, #ffbd2e 5px, transparent 6px),
-                radial-gradient(circle at 30px 6px, #27c93f 5px, transparent 6px);
-    background-repeat: no-repeat;
-}
-
-/* Cards roláveis dentro do modal */
-.estrutura_cards {
-    display: flex;
-    overflow-x: auto;
-    flex-wrap: nowrap;
-    gap: 16px;
-    padding: 2vh;
-    max-width: 100%;
-    box-sizing: border-box;
-    scrollbar-width: thin;
-    scrollbar-color: #888 #1e1e1e;
-    place-items: center;
-}
-
-.rolagem {
-    flex: 0 0 auto;
-    margin-right: 15px;
-    text-align: center;
-    display: inline-block;
-    width: 18rem;
-}
-
-/* 🔵 Celulares (até 576px) - ajustes finos */
-@media screen and (max-width: 576px) {
-    .modal_conteudo {
-        width: 85%;
     }
 }
