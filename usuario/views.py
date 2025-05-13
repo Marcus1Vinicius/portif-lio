@@ -55,7 +55,7 @@ def modal_redes(request):
     return JsonResponse(data)
 
 def modal_formacoes(request):
-    diploma = Diplomas.objects.all()
+    diploma = Diploma.objects.all()
     data = dict()
     context={}
     context['diploma'] = diploma

@@ -43,7 +43,7 @@ class Projeto(models.Model):
 
 class Diploma(models.Model):
     instituicao = models.CharField(max_length=15, null=False, unique = True)
-    foto = models.ImageField(upload_to="projetos/", null=True)
+    foto = models.ImageField(upload_to="diplomas/", null=True)
     sobre = models.TextField()
     dono = models.ForeignKey(Usuario, on_delete=models.CASCADE)
 

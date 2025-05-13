@@ -5,23 +5,15 @@
                 <h1>Redes Sociais</h1>
             </div>
             <div class="estrutura_cards">
-                {% for rede_social in redes_sociais %}
+
+                {% for rede in redes %}
                 <div class="rolagem card" style="width: 18rem;">
-                    <img src="/media/{{ projeto.foto }}" class="card-img-top" alt="Imagem do Projeto">
+                    <img src="/media/{{ rede.foto }}" class="card-img-top" alt="Imagem do Projeto">
                     <div class="card-body">
-                        <h5 class="card-title">{{ rede_social.nome }}</h5>
-        
-                        <details class="colapse">
-                            <summary>Sobre</summary>
-                            <div>
-                                {{ rede_social.sobre }}
-                            </div>
-                        </details>
-        
-                        <a href="/templates/{{ rede_social.link }}" class="btn btn-dark">Link para o {{ rede_social.nome }}</a>
-                        {% endfor %}
+                        <a href="{{ rede.link }}" class="btn btn-dark">Link</a>
                     </div>
                 </div>
+                {% endfor %}
         
             </div>
 
