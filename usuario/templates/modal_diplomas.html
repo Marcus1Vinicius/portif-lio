@@ -4,9 +4,9 @@
             <div>
                 <h1>Diplomas</h1>
             </div>
-            {% for diploma in diplomas %}
+
             <div class="estrutura_cards">
-        
+                {% for diploma in diplomas %}
                 <div class="rolagem card" style="width: 18rem;">
                     <img src="/media/{{ diploma.foto }}" class="card-img-top" alt="Imagem da Skill">
                     <div class="card-body">
@@ -16,6 +16,7 @@
                             <summary>Sobre</summary>
                             <div>
                                 {{ skill.sobre }}
+                                {% endfor %}
                             </div>
                         </details>
 
@@ -23,7 +24,6 @@
                 </div>
         
             </div>
-        {% endfor %}
     </div>
 {% endblock %}
 

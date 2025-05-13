@@ -4,9 +4,9 @@
             <div>
                 <h1>Projetos</h1>
             </div>
-            {% for projeto in projetos %}
             <div class="estrutura_cards">
-        
+
+                {% for projeto in projetos %}
                 <div class="rolagem card" style="width: 18rem;">
                     <img src="/media/{{ projeto.foto }}" class="card-img-top" alt="Imagem do Projeto">
                     <div class="card-body">
@@ -20,11 +20,11 @@
                         </details>
         
                         <a href="/templates/{{ projeto.link }}" class="btn btn-dark">Link para o projeto</a>
+                        {% endfor %}
                     </div>
                 </div>
         
             </div>
-        {% endfor %}
     </div>
 {% endblock %}
 
