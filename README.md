@@ -1,7 +1,7 @@
 
 # 🧑‍💻 Portfólio - Marcus Vinicius de Oliveira
 
-![Preview do Portfólio](media/usuario/portfólio_IMG.png)
+![Preview do Portfólio](media/usuario/portfolioimg.png)
 
 Este é um projeto de portfólio pessoal desenvolvido com Django. Ele tem como objetivo apresentar minhas habilidades, projetos e formas de contato de maneira moderna e funcional.
 
