@@ -2,26 +2,27 @@
 {% block content %}
     <div class="modal_conteudo">
             <div>
-                <h1>Diplomas</h1>
+                <h1>Formações</h1>
             </div>
 
             <div class="estrutura_cards">
+
                 {% for diploma in diplomas %}
                 <div class="rolagem card" style="width: 18rem;">
                     <img src="/media/{{ diploma.foto }}" class="card-img-top" alt="Imagem da Skill">
                     <div class="card-body">
-                        <h5 class="card-title">{{ skill.nome }}</h5>
+                        <h5 class="card-title">{{ diploma.instituicao }}</h5>
         
                         <details class="colapse">
                             <summary>Sobre</summary>
                             <div>
-                                {{ skill.sobre }}
-                                {% endfor %}
+                                {{ diploma.sobre }}
                             </div>
                         </details>
 
                     </div>
                 </div>
+                {% endfor %}
         
             </div>
     </div>

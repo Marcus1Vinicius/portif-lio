@@ -58,7 +58,7 @@ def modal_formacoes(request):
     diploma = Diploma.objects.all()
     data = dict()
     context={}
-    context['diploma'] = diploma
+    context['diplomas'] = diploma
     data['html_form'] = render_to_string('modal_diplomas.html', context, request=request)
     data['status_code'] = 200
     return JsonResponse(data)
